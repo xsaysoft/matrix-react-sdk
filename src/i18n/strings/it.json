@@ -1305,7 +1305,7 @@
     "Server Name": "Nome server",
     "The username field must not be blank.": "Il campo nome utente non deve essere vuoto.",
     "Username": "Nome utente",
-    "Not sure of your password? <a>Set a new one</a>": "Non sei sicuro della tua password? <a>Impostane una nuova</a>",
+    "Forgot Password?<a>Create a new one</a>": "Non sei sicuro della tua password? <a>Impostane una nuova</a>",
     "Sign in to your Matrix account on %(serverName)s": "Accedi al tuo account Matrix su %(serverName)s",
     "Change": "Cambia",
     "Create your Matrix account on %(serverName)s": "Crea il tuo account Matrix su %(serverName)s",

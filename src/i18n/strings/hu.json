@@ -1163,7 +1163,7 @@
     "Server Name": "Szerver neve",
     "The username field must not be blank.": "A felhasználói név mező nem lehet üres.",
     "Username": "Felhasználói név",
-    "Not sure of your password? <a>Set a new one</a>": "Nem biztos a jelszavában? <a>Adjon meg újat</a>",
+    "Forgot Password?<a>Create a new one</a>": "Nem biztos a jelszavában? <a>Adjon meg újat</a>",
     "Create your account": "Felhasználói fiók létrehozása",
     "Email (optional)": "E-mail (nem kötelező)",
     "Phone (optional)": "Telefonszám (nem kötelező)",

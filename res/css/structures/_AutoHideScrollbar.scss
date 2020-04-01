@@ -27,8 +27,9 @@ limitations under the License.
     overflow-x: hidden;
     overflow-y: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    // background-color: cyan; 
 }
-/*
+/* 
 2. webkit also supports overflow:overlay where the scrollbars don't take any space
 in the layout but they don't autohide, so do that only on hover
 */

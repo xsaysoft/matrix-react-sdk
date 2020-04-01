@@ -38,10 +38,11 @@ limitations under the License.
     pointer-events: none;
     font-weight: normal;
 }
-
+ 
 .mx_BaseAvatar_image {
     object-fit: cover;
     border-radius: 40px;
     vertical-align: top;
     background-color: $avatar-bg-color;
+    // color: red;
 }

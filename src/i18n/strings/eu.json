@@ -1153,7 +1153,7 @@
     "Server Name": "Zerbitzariaren izena",
     "The username field must not be blank.": "Erabiltzaile-izena eremua ezin da hutsik egon.",
     "Username": "Erabiltzaile-izena",
-    "Not sure of your password? <a>Set a new one</a>": "Ez duzu pasahitza gogoratzen? <a>Ezarri beste bat</a>",
+    "Forgot Password?<a>Create a new one</a>": "Ez duzu pasahitza gogoratzen? <a>Ezarri beste bat</a>",
     "Change": "Aldatu",
     "Create your account": "Sortu zure kontua",
     "Email (optional)": "E-mail (aukerakoa)",

@@ -1164,7 +1164,7 @@
     "Server Name": "Nom du serveur",
     "The username field must not be blank.": "Le champ du nom d'utilisateur ne doit pas être vide.",
     "Username": "Nom d'utilisateur",
-    "Not sure of your password? <a>Set a new one</a>": "Vous n'êtes pas sûr(e) de votre mot de passe ? <a>Changez-le</a>",
+    "Forgot Password?<a>Create a new one</a>": "Vous n'êtes pas sûr(e) de votre mot de passe ? <a>Changez-le</a>",
     "Create your account": "Créer votre compte",
     "Email (optional)": "E-mail (facultatif)",
     "Phone (optional)": "Téléphone (facultatif)",

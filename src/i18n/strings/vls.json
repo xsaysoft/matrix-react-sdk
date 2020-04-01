@@ -1190,7 +1190,7 @@
     "Email": "E-mailadresse",
     "Username": "Gebruukersnoame",
     "Phone": "Telefongnumero",
-    "Not sure of your password? <a>Set a new one</a>": "Ounzeker over je paswoord? <a>Stelt er e nieuw in</a>",
+    "Forgot Password?<a>Create a new one</a>": "Ounzeker over je paswoord? <a>Stelt er e nieuw in</a>",
     "Sign in to your Matrix account on %(serverName)s": "Anmeldn me je Matrix-account ip %(serverName)s",
     "Sign in to your Matrix account on <underlinedServerName />": "Meldt jen an me je Matrix-account ip <underlinedServerName />",
     "Change": "Wyzign",

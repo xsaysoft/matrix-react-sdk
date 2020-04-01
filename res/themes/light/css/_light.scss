@@ -65,7 +65,7 @@ $preview-bar-bg-color: #f7f7f7;
 $secondary-accent-color: #f2f5f8;
 $tertiary-accent-color: #d3efe1;
 
-$tagpanel-bg-color: #27303a;
+$tagpanel-bg-color: #15ddbc;
 
 // used by RoomDirectory permissions
 $plinth-bg-color: $secondary-accent-color;
@@ -158,7 +158,8 @@ $rte-group-pill-color: #aaa;
 $topleftmenu-color: #212121;
 $roomheader-color: #45474a;
 $roomheader-addroom-bg-color: #91A1C0;
-$roomheader-addroom-fg-color: $accent-fg-color;
+// $roomheader-addroom-fg-color: $accent-fg-color;
+$roomheader-addroom-fg-color: #ffffff;
 $tagpanel-button-color: #91A1C0;
 $roomheader-button-color: #91A1C0;
 $groupheader-button-color: #91A1C0;

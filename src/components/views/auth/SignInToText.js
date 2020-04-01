@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /*
 Copyright 2019 The Matrix.org Foundation C.I.C.
 
@@ -16,7 +17,7 @@ limitations under the License.
 
 import React from 'react';
 import {_t} from "../../../languageHandler";
-import * as sdk from "../../../index";
+// import * as sdk from "../../../index";
 import PropTypes from "prop-types";
 import {ValidatedServerConfig} from "../../../utils/AutoDiscoveryUtils";
 
@@ -27,36 +28,38 @@ export default class SignInToText extends React.PureComponent {
     };
 
     render() {
-        let signInToText = _t('Sign in to your Matrix account on %(serverName)s', {
-            serverName: this.props.serverConfig.hsName,
+        let signInToText = _t('Sign in to your OneScrin account', {
+            // serverName: this.props.serverConfig.hsName,
         });
         if (this.props.serverConfig.hsNameIsDifferent) {
-            const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
+            // const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
 
-            signInToText = _t('Sign in to your Matrix account on <underlinedServerName />', {}, {
-                'underlinedServerName': () => {
-                    return <TextWithTooltip
-                        class="mx_Login_underlinedServerName"
-                        tooltip={this.props.serverConfig.hsUrl}
-                    >
-                        {this.props.serverConfig.hsName}
-                    </TextWithTooltip>;
-                },
-            });
+            signInToText = _t('Sign in to your OneScrin account',
+            //  {}, {
+                // 'underlinedServerName': () => {
+                //     return <TextWithTooltip
+                //         class="mx_Login_underlinedServerName"
+                //         tooltip={this.props.serverConfig.hsUrl}
+                //     >
+                //         {this.props.serverConfig.hsName}
+                //     </TextWithTooltip>;
+                // },
+            // }
+            );
         }
 
-        let editLink = null;
-        if (this.props.onEditServerDetailsClick) {
-            editLink = <a className="mx_AuthBody_editServerDetails"
-                          href="#" onClick={this.props.onEditServerDetailsClick}
-            >
-                {_t('Change')}
-            </a>;
-        }
+        // let editLink = null;
+        // if (this.props.onEditServerDetailsClick) {
+        //     editLink = <a className="mx_AuthBody_editServerDetails"
+        //                   href="#" onClick={this.props.onEditServerDetailsClick}
+        //     >
+        //         {_t('Change')}
+        //     </a>;
+        // }
 
         return <h3>
             {signInToText}
-            {editLink}
+            {/* {editLink} */}
         </h3>;
     }
 }

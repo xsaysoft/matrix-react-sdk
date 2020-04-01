@@ -1087,7 +1087,7 @@
     "Your Recovery Key": "Ваш ключ восстановления",
     "Create your account": "Создать учётную запись",
     "Username": "Имя пользователя",
-    "Not sure of your password? <a>Set a new one</a>": "Не уверены в пароле? <a>Установите новый</a>",
+    "Forgot Password?<a>Create a new one</a>": "Не уверены в пароле? <a>Установите новый</a>",
     "The username field must not be blank.": "Имя пользователя не должно быть пустым.",
     "Server Name": "Название сервера",
     "Your Modular server": "Ваш Модульный сервер",

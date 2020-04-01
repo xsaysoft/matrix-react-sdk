@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /*
 Copyright 2015, 2016 OpenMarket Ltd
 Copyright 2017 Vector Creations Ltd
@@ -550,22 +551,24 @@ export default createReactClass({
     },
 
     render: function() {
-        let yourMatrixAccountText = _t('Create your Matrix account on %(serverName)s', {
-            serverName: this.props.serverConfig.hsName,
+        let yourMatrixAccountText = _t('Create your OneScrin account', {
+            // serverName: this.props.serverConfig.hsName,
         });
         if (this.props.serverConfig.hsNameIsDifferent) {
-            const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
+            // const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
 
-            yourMatrixAccountText = _t('Create your Matrix account on <underlinedServerName />', {}, {
-                'underlinedServerName': () => {
-                    return <TextWithTooltip
-                        class="mx_Login_underlinedServerName"
-                        tooltip={this.props.serverConfig.hsUrl}
-                    >
-                        {this.props.serverConfig.hsName}
-                    </TextWithTooltip>;
-                },
-            });
+            yourMatrixAccountText = _t('Create your OneScrin account',
+            //  {}, {
+            //     'underlinedServerName': () => {
+            //         return <TextWithTooltip
+            //             class="mx_Login_underlinedServerName"
+            //             tooltip={this.props.serverConfig.hsUrl}
+            //         >
+            //             {this.props.serverConfig.hsName}
+            //         </TextWithTooltip>;
+            //     },
+            // }
+            );
         }
 
         let editLink = null;

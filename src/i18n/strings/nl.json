@@ -1269,7 +1269,7 @@
     "Server Name": "Servernaam",
     "The username field must not be blank.": "Het gebruikersnaamveld mag niet leeg zijn.",
     "Username": "Gebruikersnaam",
-    "Not sure of your password? <a>Set a new one</a>": "Onzeker over uw wachtwoord? <a>Stel er een nieuw in</a>",
+    "Forgot Password?<a>Create a new one</a>": "Onzeker over uw wachtwoord? <a>Stel er een nieuw in</a>",
     "Sign in to your Matrix account on %(serverName)s": "Aanmelden met uw Matrix-account op %(serverName)s",
     "Change": "Wijzigen",
     "Create your Matrix account on %(serverName)s": "Maak uw Matrix-account aan op %(serverName)s",

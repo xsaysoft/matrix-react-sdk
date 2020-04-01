@@ -267,7 +267,7 @@ export default class PasswordLogin extends React.Component {
 
         if (this.props.onForgotPasswordClick) {
             forgotPasswordJsx = <span>
-                {_t('Not sure of your password? <a>Set a new one</a>', {}, {
+                {_t('Forgot password? <a>Create a new one</a>', {}, {
                     a: sub => <a className="mx_Login_forgot"
                         onClick={this.onForgotPasswordClick}
                         href="#"
