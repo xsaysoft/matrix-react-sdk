@@ -289,7 +289,7 @@ export default class PasswordLogin extends React.Component {
             loginType = (
                 <div className="mx_Login_type_container">
                     <label className="mx_Login_type_label">{ _t('Sign in with') }</label>
-                    <Field
+                    {/* <Field
                         id="mx_PasswordLogin_type"
                         element="select"
                         value={this.state.loginType}
@@ -314,7 +314,7 @@ export default class PasswordLogin extends React.Component {
                         >
                             {_t('Phone')}
                         </option>
-                    </Field>
+                    </Field> */}
                 </div>
             );
         }

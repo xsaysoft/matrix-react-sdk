@@ -16,7 +16,7 @@ limitations under the License.
 
 .mx_Dropdown {
     position: relative;
-    color: $primary-fg-color;
+    color: grey;
 }
 
 .mx_Dropdown_disabled {
@@ -56,6 +56,7 @@ limitations under the License.
     line-height: 35px;
     padding-left: 8px;
     padding-right: 8px;
+    color: grey;
 }
 
 .mx_Dropdown_input > .mx_Dropdown_option {
