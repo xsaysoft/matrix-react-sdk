@@ -16,11 +16,8 @@ limitations under the License.
 
 .mx_TagPanel {
     flex: 1;
-    // background-color: $tagpanel-bg-color; 
-    background: #92FE9D;  /* fallback for old browsers */
-    // background: -webkit-linear-gradient(to bottom, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
-    // background: linear-gradient(to bottom, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
-    
+    background-color: $tagpanel-bg-color; 
+    // background: #00008b; 
     cursor: pointer;
 
     display: flex;
