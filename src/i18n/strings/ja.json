@@ -1118,7 +1118,7 @@
     "Next": "次へ",
     "The username field must not be blank.": "ユーザー名フィールドは空白であってはいけません。",
     "Username": "ユーザー名",
-    "Not sure of your password? <a>Set a new one</a>": "パスワードに覚えがありませんか？ <a>新しいものを設定しましょう</a>",
+    "Forgot Password?<a>Create a new one</a>": "パスワードに覚えがありませんか？ <a>新しいものを設定しましょう</a>",
     "Other servers": "他のサーバー",
     "Sign in to your Matrix account on %(serverName)s": "%(serverName)s上のMatrixアカウントにサインインします",
     "Sign in to your Matrix account on <underlinedServerName />": "<underlinedServerName />上のMatrixアカウントにサインインします",

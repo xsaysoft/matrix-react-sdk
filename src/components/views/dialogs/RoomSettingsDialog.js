@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /*
 Copyright 2019 New Vector Ltd
 Copyright 2019 Michael Telatynski <7t3chguy@gmail.com>
@@ -84,11 +85,11 @@ export default class RoomSettingsDialog extends React.Component {
             ));
         }
 
-        tabs.push(new Tab(
-            _td("Advanced"),
-            "mx_RoomSettingsDialog_warningIcon",
-            <AdvancedRoomSettingsTab roomId={this.props.roomId} closeSettingsFn={this.props.onFinished} />,
-        ));
+        // tabs.push(new Tab(
+        //     _td("Advanced"),
+        //     "mx_RoomSettingsDialog_warningIcon",
+        //     <AdvancedRoomSettingsTab roomId={this.props.roomId} closeSettingsFn={this.props.onFinished} />,
+        // ));
 
         return tabs;
     }
@@ -99,7 +100,7 @@ export default class RoomSettingsDialog extends React.Component {
         const roomName = MatrixClientPeg.get().getRoom(this.props.roomId).name;
         return (
             <BaseDialog className='mx_RoomSettingsDialog' hasCancel={true}
-                        onFinished={this.props.onFinished} title={_t("Room Settings - %(roomName)s", {roomName})}>
+                        onFinished={this.props.onFinished} title={_t("Room Settings")}>
                 <div className='ms_SettingsDialog_content'>
                     <TabbedView tabs={this._getTabs()} />
                 </div>

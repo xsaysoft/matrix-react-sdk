@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /*
 Copyright 2017 Vector Creations Ltd
 Copyright 2019 Michael Telatynski <7t3chguy@gmail.com>
@@ -118,7 +119,7 @@ export default createReactClass({
                         </div>
                         { _t(
                             'Create a community to group together users and rooms! ' +
-                            'Build a custom homepage to mark out your space in the Matrix universe.',
+                            'Build an homepage on OneScrin',
                         ) }
                     </div>
                 </div>

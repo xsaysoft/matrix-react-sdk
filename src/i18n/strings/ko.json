@@ -1452,7 +1452,7 @@
     "Server Name": "서버 이름",
     "The username field must not be blank.": "사용자 이름을 반드시 입력해야 합니다.",
     "Username": "사용자 이름",
-    "Not sure of your password? <a>Set a new one</a>": "비밀번호가 불확실한가요? <a>새 것으로 설정</a>",
+    "Forgot Password?<a>Create a new one</a>": "비밀번호가 불확실한가요? <a>새 것으로 설정</a>",
     "Sign in to your Matrix account on %(serverName)s": "%(serverName)s에서 Matrix 계정으로 로그인함",
     "Sign in to your Matrix account on <underlinedServerName />": "<underlinedServerName />에서 Matrix 계정으로 로그인함",
     "Use an email address to recover your account": "이메일 주소를 사용하여 계정을 복구",

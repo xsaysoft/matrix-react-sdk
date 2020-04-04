@@ -1128,7 +1128,7 @@
     "Server Name": "Servernamn",
     "The username field must not be blank.": "Användarnamnsfältet får inte vara tomt.",
     "Username": "Användarnamn",
-    "Not sure of your password? <a>Set a new one</a>": "Osäker på ditt lösenord? <a>Ange ett nytt</a>",
+    "Forgot Password?<a>Create a new one</a>": "Osäker på ditt lösenord? <a>Ange ett nytt</a>",
     "Sign in to your Matrix account on %(serverName)s": "Logga in med ditt Matrix-konto på %(serverName)s",
     "Change": "Ändra",
     "Create your Matrix account on %(serverName)s": "Skapa ditt Matrix-konto på %(serverName)s",

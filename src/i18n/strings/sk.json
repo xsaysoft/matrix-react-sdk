@@ -1305,7 +1305,7 @@
     "Server Name": "Názov servera",
     "The username field must not be blank.": "Pole meno používateľa nesmie ostať prázdne.",
     "Username": "Meno používateľa",
-    "Not sure of your password? <a>Set a new one</a>": "Nie ste si istí vašim heslom? <a>Nastavte si nové</a>",
+    "Forgot Password?<a>Create a new one</a>": "Nie ste si istí vašim heslom? <a>Nastavte si nové</a>",
     "Sign in to your Matrix account on %(serverName)s": "Prihláste sa k svojmu Matrix účtu na servery %(serverName)s",
     "Change": "Zmeniť",
     "Create your Matrix account on %(serverName)s": "Vytvorte si Matrix účet na servery %(serverName)s",

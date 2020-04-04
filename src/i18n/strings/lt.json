@@ -911,7 +911,7 @@
     "A username can only contain lower case letters, numbers and '=_-./'": "Vartotojo vardą gali sudaryti tik mažosios raidės, skaičiai ir '=_-./'",
     "The username field must not be blank.": "Vartotojo vardo laukelis negali būti tuščias.",
     "Username": "Vartotojo vardas",
-    "Not sure of your password? <a>Set a new one</a>": "Pamiršote slaptažodį? <a>Nustatykite naują</a>",
+    "Forgot Password?<a>Create a new one</a>": "Pamiršote slaptažodį? <a>Nustatykite naują</a>",
     "Enter username": "Įveskite vartotojo vardą",
     "Confirm": "Patvirtinti",
     "Create your Matrix account on %(serverName)s": "Sukurkite savo Matrix paskyrą %(serverName)s serveryje",

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /*
 Copyright 2018 New Vector Ltd.
 
@@ -17,8 +18,8 @@ limitations under the License.
 import React from 'react';
 import PropTypes from 'prop-types';
 import dis from '../../../dispatcher';
-import { _t } from '../../../languageHandler';
-import * as sdk from '../../../index';
+// import { _t } from '../../../languageHandler';
+// import * as sdk from '../../../index';
 import Analytics from '../../../Analytics';
 
 export default class CookieBar extends React.Component {
@@ -49,11 +50,11 @@ export default class CookieBar extends React.Component {
     }
 
     render() {
-        const AccessibleButton = sdk.getComponent('elements.AccessibleButton');
+        // const AccessibleButton = sdk.getComponent('elements.AccessibleButton');
         const toolbarClasses = "mx_MatrixToolbar";
         return (
             <div className={toolbarClasses}>
-                <img className="mx_MatrixToolbar_warning" src={require("../../../../res/img/warning.svg")} width="24" height="23" alt="" />
+                {/* <img className="mx_MatrixToolbar_warning" src={require("../../../../res/img/warning.svg")} width="24" height="23" alt="" />
                 <div className="mx_MatrixToolbar_content">
                     { this.props.policyUrl ? _t(
                         "Please help improve Riot.im by sending <UsageDataLink>anonymous usage data</UsageDataLink>. " +
@@ -96,7 +97,7 @@ export default class CookieBar extends React.Component {
                 </AccessibleButton>
                 <AccessibleButton className="mx_MatrixToolbar_close" onClick={this.onReject}>
                     <img src={require("../../../../res/img/cancel.svg")} width="18" height="18" alt={_t('Close')} />
-                </AccessibleButton>
+                </AccessibleButton>*/}
             </div>
         );
     }

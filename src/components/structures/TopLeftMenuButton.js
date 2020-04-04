@@ -136,7 +136,7 @@ export default class TopLeftMenuButton extends React.Component {
                 className="mx_TopLeftMenuButton"
                 onClick={this.openMenu}
                 inputRef={(r) => this._buttonRef = r}
-                label={_t("Your profile")}
+                label={_t("Your profile")} 
                 isExpanded={this.state.menuDisplayed}
             >
                 <BaseAvatar

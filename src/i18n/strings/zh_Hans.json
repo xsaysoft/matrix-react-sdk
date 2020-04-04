@@ -1253,7 +1253,7 @@
     "Server Name": "服务器名称",
     "The username field must not be blank.": "必须输入用户名。",
     "Username": "用户名",
-    "Not sure of your password? <a>Set a new one</a>": "密码不确定？<a>新建一个密码</a>",
+    "Forgot Password?<a>Create a new one</a>": "密码不确定？<a>新建一个密码</a>",
     "Sign in to your Matrix account on %(serverName)s": "在 %(serverName)s 登入您的 Matrix 账号",
     "Change": "更改",
     "Create your Matrix account on %(serverName)s": "在 %(serverName)s 上创建 Matrix 账号",

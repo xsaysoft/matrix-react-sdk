@@ -937,7 +937,7 @@
     "Messages containing my username": "Поруке које садрже моје корисничко",
     "The username field must not be blank.": "Поље корисничког имена не може бити празно.",
     "Username": "Корисничко име",
-    "Not sure of your password? <a>Set a new one</a>": "Не сећате се лозинке? <a>Поставите нову</a>",
+    "Forgot Password?<a>Create a new one</a>": "Не сећате се лозинке? <a>Поставите нову</a>",
     "Are you sure you want to sign out?": "Да ли сте сигурни да се желите одјавити?",
     "Call failed due to misconfigured server": "Позив није успео због погрешно подешеног сервера",
     "Please ask the administrator of your homeserver (<code>%(homeserverDomain)s</code>) to configure a TURN server in order for calls to work reliably.": "Замолите администратора вашег сервера (<code>%(homeserverDomain)s</code>) да подеси TURN сервер како би позиви радили поуздано.",

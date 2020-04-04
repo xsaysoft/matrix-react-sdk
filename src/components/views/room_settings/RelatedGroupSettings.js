@@ -114,7 +114,8 @@ export default class RelatedGroupSettings extends React.Component {
                 itemsLabel={_t('Showing flair for these communities:')}
                 noItemsLabel={_t('This room is not showing flair for any communities')}
                 placeholder={_t(
-                    'New community ID (e.g. +foo:%(localDomain)s)', {localDomain},
+                    'New community ID',
+                    // 'New community ID (e.g. +foo:%(localDomain)s)', {localDomain},
                 )}
             />
         </div>;

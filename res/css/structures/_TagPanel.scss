@@ -16,7 +16,8 @@ limitations under the License.
 
 .mx_TagPanel {
     flex: 1;
-    background-color: $tagpanel-bg-color;
+    background-color: $tagpanel-bg-color; 
+    // background: #00008b; 
     cursor: pointer;
 
     display: flex;

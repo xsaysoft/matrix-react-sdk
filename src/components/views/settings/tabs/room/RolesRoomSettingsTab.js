@@ -400,7 +400,7 @@ export default class RolesRoomSettingsTab extends React.Component {
         return (
             <div className="mx_SettingsTab mx_RolesRoomSettingsTab">
                 <div className="mx_SettingsTab_heading">{_t("Roles & Permissions")}</div>
-                {privilegedUsersSection}
+                {/* {privilegedUsersSection} */}
                 {mutedUsersSection}
                 {bannedUsersSection}
                 <div className='mx_SettingsTab_section mx_SettingsTab_subsectionText'>

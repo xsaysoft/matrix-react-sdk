@@ -16,7 +16,7 @@ limitations under the License.
 
 .mx_RoomHeader {
     flex: 0 0 52px;
-    border-bottom: 1px solid $primary-hairline-color;
+    border-bottom: 1px solid rgb(187, 180, 180);
 
     .mx_E2EIcon {
         margin: 0;
@@ -35,6 +35,7 @@ limitations under the License.
     align-items: center;
     min-width: 0;
     padding: 0 10px 0 19px;
+    background-color: transparent;
 }
 
 .mx_RoomHeader_spinner {
@@ -66,8 +67,10 @@ limitations under the License.
 
 .mx_RoomHeader_buttons {
     display: flex;
-    background-color: $primary-bg-color;
-    padding-right: 5px;
+    background-color: #91A1C0;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 25px;
 }
 
 .mx_RoomHeader_info {
@@ -101,11 +104,12 @@ limitations under the License.
     flex: 0 1 auto;
     overflow: hidden;
     color: $roomheader-color;
-    font-weight: 600;
+    font-weight: bolder;
     font-size: 18px;
     margin: 0 7px;
     border-bottom: 1px solid transparent;
     display: flex;
+    transition: all 0.3s linear;
 }
 
 .mx_RoomHeader_nametext {
@@ -138,7 +142,7 @@ limitations under the License.
 }
 
 .mx_RoomHeader_name:hover div:not(.mx_RoomHeader_editable) {
-    color: $accent-color;
+    color: #ffffff;
 }
 
 .mx_RoomHeader_placeholder {

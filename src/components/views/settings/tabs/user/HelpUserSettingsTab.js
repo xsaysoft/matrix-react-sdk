@@ -163,7 +163,7 @@ export default class HelpUserSettingsTab extends React.Component {
                     }
                     <div>
                         <AccessibleButton onClick={this._onStartBotChat} kind='primary'>
-                            {_t("Chat with Riot Bot")}
+                            {_t("Chat with Scrin Bot")}
                         </AccessibleButton>
                     </div>
                 </div>

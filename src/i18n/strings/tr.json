@@ -1669,7 +1669,7 @@
     "Mark all as read": "Tümünü okunmuş olarak işaretle",
     "Incoming Verification Request": "Gelen Doğrulama İsteği",
     "Use bots, bridges, widgets and sticker packs": "Botları, köprüleri, görsel bileşenleri ve çıkartma paketlerini kullan",
-    "Not sure of your password? <a>Set a new one</a>": "Şifrenizden emin değil misiniz? <a>Yenisini ayalarla</a>",
+    "Forgot Password?<a>Create a new one</a>": "Şifrenizden emin değil misiniz? <a>Yenisini ayalarla</a>",
     "Want more than a community? <a>Get your own server</a>": "Bir topluluktan fazlasınımı istiyorsunuz? <a>Kendi sunucunuzu edinin</a>",
     "Explore rooms": "Odaları keşfet",
     "<showSessionsText>Show sessions</showSessionsText>, <sendAnywayText>send anyway</sendAnywayText> or <cancelText>cancel</cancelText>.": "<showSessionsText>Oturumları gözat</showSessionsText>, <sendAnywayText>yinede gönder</sendAnywayText> yada <cancelText>iptal</cancelText>.",

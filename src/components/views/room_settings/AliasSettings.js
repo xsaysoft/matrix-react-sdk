@@ -349,7 +349,7 @@ export default class AliasSettings extends React.Component {
                 onItemRemoved={this.onLocalAliasDeleted}
                 noItemsLabel={_t('This room has no local addresses')}
                 placeholder={_t('Local address')}
-                domain={localDomain}
+                // domain={localDomain}
             />);
         }
 
@@ -381,8 +381,8 @@ export default class AliasSettings extends React.Component {
                     placeholder={_t('New published address (e.g. #alias:server)')}
                 />
                 <span className='mx_SettingsTab_subheading mx_AliasSettings_localAliasHeader'>{_t("Local Addresses")}</span>
-                <p>{_t("Set addresses for this room so users can find this room through your homeserver (%(localDomain)s)", {localDomain})}</p>
-                <details onToggle={this.onLocalAliasesToggled}>
+                <p>{_t("Set addresses for this room so users can find this room through your homeserver")}</p>
+                <details onToggle={this.onLocalAliasesToggled}> 
                     <summary>{ this.state.detailsOpen ? _t('Show less') : _t("Show more")}</summary>
                     {localAliasesList}
                 </details>

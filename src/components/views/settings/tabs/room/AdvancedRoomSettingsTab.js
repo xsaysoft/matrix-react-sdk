@@ -131,7 +131,7 @@ export default class AdvancedRoomSettingsTab extends React.Component {
 
         return (
             <div className="mx_SettingsTab">
-                <div className="mx_SettingsTab_heading">{_t("Advanced")}</div>
+                {/* <div className="mx_SettingsTab_heading">{_t("Advanced")}</div>
                 <div className='mx_SettingsTab_section mx_SettingsTab_subsectionText'>
                     <span className='mx_SettingsTab_subheading'>{_t("Room information")}</span>
                     <div>
@@ -154,7 +154,7 @@ export default class AdvancedRoomSettingsTab extends React.Component {
                     <AccessibleButton onClick={this._openDevtools} kind='primary'>
                         {_t("Open Devtools")}
                     </AccessibleButton>
-                </div>
+                </div> */}
             </div>
         );
     }

@@ -26,7 +26,7 @@ export default createReactClass({
     render: function() {
         return (
             <div className="mx_AuthFooter">
-                <a href="https://matrix.org" target="_blank" rel="noreferrer noopener">{ _t("powered by Matrix") }</a>
+                <a href="https://onescrin.citural.com.ng" target="_blank" rel="noreferrer noopener">{ _t("Powered by OneScrin") }</a>
             </div>
         );
     },
