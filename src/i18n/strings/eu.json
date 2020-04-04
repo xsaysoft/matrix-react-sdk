@@ -2201,7 +2201,7 @@
     "No other published addresses yet, add one below": "Ez dago argitaratutako beste helbiderik, gehitu bat azpian",
     "New published address (e.g. #alias:server)": "Argitaratutako helbide berria (adib. #ezizena:zerbitzaria)",
     "Local Addresses": "Helbide lokalak",
-    "Set addresses for this room so users can find this room through your homeserver (%(localDomain)s)": "Ezarri gela honen helbideak erabiltzaileek gela aurki dezaten zure hasiera-zerbitzariaren bidez (%(localDomain)s)",
+    "Set addresses for this room so users can find this room through your homeserver": "Ezarri gela honen helbideak erabiltzaileek gela aurki dezaten zure hasiera-zerbitzariaren bidez",
     "Enter a server name": "Sartu zerbitzari-izena",
     "Looks good": "Itxura ona du",
     "Can't find this server or its room list": "Ezin da zerbitzaria aurkitu edo honen gelen zerrenda",

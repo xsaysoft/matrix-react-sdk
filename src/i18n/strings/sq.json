@@ -2201,7 +2201,7 @@
     "No other published addresses yet, add one below": "Ende pa adresa të tjera të publikuara, shtoni një më poshtë",
     "New published address (e.g. #alias:server)": "Adresë e re e publikuar (p.sh., #alias:server)",
     "Local Addresses": "Adresa Vendore",
-    "Set addresses for this room so users can find this room through your homeserver (%(localDomain)s)": "Caktoni adresa për këtë dhomë, që kështu përdoruesit të gjejnë këtë dhomë përmes shërbyesit tuaj Home (%(localDomain)s)",
+    "Set addresses for this room so users can find this room through your homeserver": "Caktoni adresa për këtë dhomë, që kështu përdoruesit të gjejnë këtë dhomë përmes shërbyesit tuaj Home",
     "Enter a server name": "Jepni një emër shërbyesi",
     "Looks good": "Duket mirë",
     "Can't find this server or its room list": "S’gjendet dot ky shërbyes ose lista e dhomave të tij",

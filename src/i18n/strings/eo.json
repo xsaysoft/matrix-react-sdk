@@ -2193,7 +2193,7 @@
     "No other published addresses yet, add one below": "Ankoraŭ neniuj aliaj publikigitaj adresoj; aldonu iun sube",
     "New published address (e.g. #alias:server)": "Nova publikigita adreso (ekz. #kromnomo:servilo)",
     "Local Addresses": "Lokaj adresoj",
-    "Set addresses for this room so users can find this room through your homeserver (%(localDomain)s)": "Agordu adresojn por ĉi tiu ĉambro, por ke uzantoj povu ĝin trovi per via hejmservilo (%(localDomain)s)",
+    "Set addresses for this room so users can find this room through your homeserver": "Agordu adresojn por ĉi tiu ĉambro, por ke uzantoj povu ĝin trovi per via hejmservilo",
     "Enter a server name": "Enigu nomon de servilo",
     "Looks good": "Ŝajnas en ordo",
     "Can't find this server or its room list": "Ne povas trovi ĉi tiun servilon aŭ ĝian liston de ĉambroj",

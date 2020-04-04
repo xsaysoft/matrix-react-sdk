@@ -2213,7 +2213,7 @@
     "No other published addresses yet, add one below": "Aucune autre adresse n’est publiée, ajoutez-en une ci-dessous",
     "New published address (e.g. #alias:server)": "Nouvelles adresses publiées (par ex. #alias:serveur)",
     "Local Addresses": "Adresses locales",
-    "Set addresses for this room so users can find this room through your homeserver (%(localDomain)s)": "Définissez les adresses de ce salon pour que les utilisateurs puissent trouver ce salon avec votre serveur d’accueil (%(localDomain)s)",
+    "Set addresses for this room so users can find this room through your homeserver": "Définissez les adresses de ce salon pour que les utilisateurs puissent trouver ce salon avec votre serveur d’accueil",
     "Open an existing session & use it to verify this one, granting it access to encrypted messages.": "Ouvrez une session existante et utilisez-la pour vérifier celle-ci, ce qui lui permettra d’avoir accès aux messages chiffrés.",
     "Waiting…": "Patientez…",
     "If you can’t access one, <button>use your recovery key or passphrase.</button>": "Si vous n’avez accès à aucune session, <button>utilisez votre clé de récupération ou votre phrase de passe.</button>",

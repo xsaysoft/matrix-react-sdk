@@ -2210,7 +2210,7 @@
     "No other published addresses yet, add one below": "Nessun altro indirizzo ancora pubblicato, aggiungine uno sotto",
     "New published address (e.g. #alias:server)": "Nuovo indirizzo pubblicato (es. #alias:server)",
     "Local Addresses": "Indirizzi locali",
-    "Set addresses for this room so users can find this room through your homeserver (%(localDomain)s)": "Imposta gli indirizzi per la stanza affinché gli utenti la trovino attraverso il tuo homeserver (%(localDomain)s)",
+    "Set addresses for this room so users can find this room through your homeserver": "Imposta gli indirizzi per la stanza affinché gli utenti la trovino attraverso il tuo homeserver",
     "Open an existing session & use it to verify this one, granting it access to encrypted messages.": "Apri una sessione esistente e usala per verificare questa, dandole accesso ai messaggi cifrati.",
     "Waiting…": "In attesa…",
     "If you can’t access one, <button>use your recovery key or passphrase.</button>": "Se non puoi accedere a nessuna, <button>usa la chiave di recupero o la password.</button>",

@@ -146,7 +146,7 @@ export default class ServerTypeSelector extends React.PureComponent {
         }
 
         return <div className="mx_ServerTypeSelector">
-            {serverTypes}
+            {/* {serverTypes} */}
         </div>;
     }
 }
