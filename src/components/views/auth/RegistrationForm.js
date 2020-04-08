@@ -4,13 +4,10 @@ Copyright 2015, 2016 OpenMarket Ltd
 Copyright 2017 Vector Creations Ltd
 Copyright 2018, 2019 New Vector Ltd
 Copyright 2019 Michael Telatynski <7t3chguy@gmail.com>
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
     http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -18,24 +15,24 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
-import * as sdk from '../../../index';
-import * as Email from '../../../email';
-import { looksValid as phoneNumberLooksValid } from '../../../phonenumber';
-import Modal from '../../../Modal';
-import { _t } from '../../../languageHandler';
-import SdkConfig from '../../../SdkConfig';
-import { SAFE_LOCALPART_REGEX } from '../../../Registration';
-import withValidation from '../elements/Validation';
-import {ValidatedServerConfig} from "../../../utils/AutoDiscoveryUtils";
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
+import * as sdk from "../../../index";
+import * as Email from "../../../email";
+import { looksValid as phoneNumberLooksValid } from "../../../phonenumber";
+import Modal from "../../../Modal";
+import { _t } from "../../../languageHandler";
+import SdkConfig from "../../../SdkConfig";
+import { SAFE_LOCALPART_REGEX } from "../../../Registration";
+import withValidation from "../elements/Validation";
+import { ValidatedServerConfig } from "../../../utils/AutoDiscoveryUtils";
 
-const FIELD_EMAIL = 'field_email';
-const FIELD_PHONE_NUMBER = 'field_phone_number';
-const FIELD_USERNAME = 'field_username';
-const FIELD_PASSWORD = 'field_password';
-const FIELD_PASSWORD_CONFIRM = 'field_password_confirm';
+const FIELD_EMAIL = "field_email";
+const FIELD_PHONE_NUMBER = "field_phone_number";
+const FIELD_USERNAME = "field_username";
+const FIELD_PASSWORD = "field_password";
+const FIELD_PASSWORD_CONFIRM = "field_password_confirm";
 
 const PASSWORD_MIN_SCORE = 3; // safely unguessable: moderate protection from offline slow-hash scenario.
 
@@ -43,7 +40,7 @@ const PASSWORD_MIN_SCORE = 3; // safely unguessable: moderate protection from of
  * A pure UI component which displays a registration form.
  */
 export default createReactClass({
-    displayName: 'RegistrationForm',
+    displayName: "RegistrationForm",
 
     propTypes: {
         // Values pre-filled in the input boxes when the component loads
@@ -94,33 +91,38 @@ export default createReactClass({
         }
 
         const self = this;
-        if (this.state.email === '') {
+        if (this.state.email === "") {
             const haveIs = Boolean(this.props.serverConfig.isUrl);
 
             let desc;
             if (this.props.serverRequiresIdServer && !haveIs) {
                 desc = _t(
                     "No identity server is configured so you cannot add an email address in order to " +
-                    "reset your password in the future.",
+                        "reset your password in the future.",
                 );
             } else {
                 desc = _t(
                     "If you don't specify an email address, you won't be able to reset your password. " +
-                    "Are you sure?",
+                        "Are you sure?",
                 );
             }
 
             const QuestionDialog = sdk.getComponent("dialogs.QuestionDialog");
-            Modal.createTrackedDialog('If you don\'t specify an email address...', '', QuestionDialog, {
-                title: _t("Warning!"),
-                description: desc,
-                button: _t("Continue"),
-                onFinished: function(confirmed) {
-                    if (confirmed) {
-                        self._doSubmit(ev);
-                    }
+            Modal.createTrackedDialog(
+                "If you don't specify an email address...",
+                "",
+                QuestionDialog,
+                {
+                    title: _t("Warning!"),
+                    description: desc,
+                    button: _t("Continue"),
+                    onFinished: function(confirmed) {
+                        if (confirmed) {
+                            self._doSubmit(ev);
+                        }
+                    },
                 },
-            });
+            );
         } else {
             self._doSubmit(ev);
         }
@@ -176,7 +178,7 @@ export default createReactClass({
 
         // Validation and state updates are async, so we need to wait for them to complete
         // first. Queue a `setState` callback and wait for it to resolve.
-        await new Promise(resolve => this.setState({}, resolve));
+        await new Promise((resolve) => this.setState({}, resolve));
 
         if (this.allFieldsValid()) {
             return true;
@@ -243,9 +245,14 @@ export default createReactClass({
             {
                 key: "required",
                 test: function({ value, allowEmpty }) {
-                    return allowEmpty || !this._authStepIsRequired('m.login.email.identity') || !!value;
+                    return (
+                        allowEmpty ||
+                        !this._authStepIsRequired("m.login.email.identity") ||
+                        !!value
+                    );
                 },
-                invalid: () => _t("Enter email address (required on this homeserver)"),
+                invalid: () =>
+                    _t("Enter email address (required on this homeserver)"),
             },
             {
                 key: "email",
@@ -271,11 +278,13 @@ export default createReactClass({
         description: function() {
             const complexity = this.state.passwordComplexity;
             const score = complexity ? complexity.score : 0;
-            return <progress
-                className="mx_AuthBody_passwordScore"
-                max={PASSWORD_MIN_SCORE}
-                value={score}
-            />;
+            return (
+                <progress
+                    className="mx_AuthBody_passwordScore"
+                    max={PASSWORD_MIN_SCORE}
+                    value={score}
+                />
+            );
         },
         rules: [
             {
@@ -289,10 +298,14 @@ export default createReactClass({
                     if (!value) {
                         return false;
                     }
-                    const { scorePassword } = await import('../../../utils/PasswordScorer');
+                    const { scorePassword } = await import(
+                        "../../../utils/PasswordScorer"
+                    );
                     const complexity = scorePassword(value);
                     const safe = complexity.score >= PASSWORD_MIN_SCORE;
-                    const allowUnsafe = SdkConfig.get()["dangerously_allow_unsafe_and_insecure_passwords"];
+                    const allowUnsafe = SdkConfig.get()[
+                        "dangerously_allow_unsafe_and_insecure_passwords"
+                    ];
                     this.setState({
                         passwordComplexity: complexity,
                         passwordSafe: safe,
@@ -314,7 +327,11 @@ export default createReactClass({
                         return null;
                     }
                     const { feedback } = complexity;
-                    return feedback.warning || feedback.suggestions[0] || _t("Keep going...");
+                    return (
+                        feedback.warning ||
+                        feedback.suggestions[0] ||
+                        _t("Keep going...")
+                    );
                 },
             },
         ],
@@ -346,7 +363,7 @@ export default createReactClass({
                 },
                 invalid: () => _t("Passwords don't match"),
             },
-         ],
+        ],
     }),
 
     onPhoneCountryChange(newVal) {
@@ -369,14 +386,22 @@ export default createReactClass({
     },
 
     validatePhoneNumberRules: withValidation({
-        description: () => _t("Other users can invite you to rooms using your contact details"),
+        description: () =>
+            _t(
+                "Other users can invite you to rooms using your contact details",
+            ),
         rules: [
             {
                 key: "required",
                 test: function({ value, allowEmpty }) {
-                    return allowEmpty || !this._authStepIsRequired('m.login.msisdn') || !!value;
+                    return (
+                        allowEmpty ||
+                        !this._authStepIsRequired("m.login.msisdn") ||
+                        !!value
+                    );
                 },
-                invalid: () => _t("Enter phone number (required on this homeserver)"),
+                invalid: () =>
+                    _t("Enter phone number (required on this homeserver)"),
             },
             {
                 key: "email",
@@ -399,7 +424,8 @@ export default createReactClass({
     },
 
     validateUsernameRules: withValidation({
-        description: () => _t("Use lowercase letters, numbers, dashes and underscores only"),
+        description: () =>
+            _t("Use lowercase letters, numbers, dashes and underscores only"),
         rules: [
             {
                 key: "required",
@@ -442,7 +468,7 @@ export default createReactClass({
         const haveIs = Boolean(this.props.serverConfig.isUrl);
         if (
             (this.props.serverRequiresIdServer && !haveIs) ||
-            !this._authStepIsUsed('m.login.email.identity')
+            !this._authStepIsUsed("m.login.email.identity")
         ) {
             return false;
         }
@@ -455,7 +481,7 @@ export default createReactClass({
         if (
             !threePidLogin ||
             (this.props.serverRequiresIdServer && !haveIs) ||
-            !this._authStepIsUsed('m.login.msisdn')
+            !this._authStepIsUsed("m.login.msisdn")
         ) {
             return false;
         }
@@ -466,151 +492,181 @@ export default createReactClass({
         if (!this._showEmail()) {
             return null;
         }
-        const Field = sdk.getComponent('elements.Field');
-        const emailPlaceholder = this._authStepIsRequired('m.login.email.identity') ?
-            _t("Email") :
-            _t("Email (optional)");
-        return <Field
-            id="mx_RegistrationForm_email"
-            ref={field => this[FIELD_EMAIL] = field}
-            type="text"
-            label={emailPlaceholder}
-            value={this.state.email}
-            onChange={this.onEmailChange}
-            onValidate={this.onEmailValidate}
-        />;
+        const Field = sdk.getComponent("elements.Field");
+        const emailPlaceholder = this._authStepIsRequired(
+            "m.login.email.identity",
+        )
+            ? _t("Email")
+            : _t("Email (optional)");
+        return (
+            <Field
+                id="mx_RegistrationForm_email"
+                ref={(field) => (this[FIELD_EMAIL] = field)}
+                type="text"
+                label={emailPlaceholder}
+                value={this.state.email}
+                onChange={this.onEmailChange}
+                onValidate={this.onEmailValidate}
+            />
+        );
     },
 
     renderPassword() {
-        const Field = sdk.getComponent('elements.Field');
-        return <Field
-            id="mx_RegistrationForm_password"
-            ref={field => this[FIELD_PASSWORD] = field}
-            type="password"
-            autoComplete="new-password"
-            label={_t("Password")}
-            value={this.state.password}
-            onChange={this.onPasswordChange}
-            onValidate={this.onPasswordValidate}
-        />;
+        const Field = sdk.getComponent("elements.Field");
+        return (
+            <Field
+                id="mx_RegistrationForm_password"
+                ref={(field) => (this[FIELD_PASSWORD] = field)}
+                type="password"
+                autoComplete="new-password"
+                label={_t("Password")}
+                value={this.state.password}
+                onChange={this.onPasswordChange}
+                onValidate={this.onPasswordValidate}
+            />
+        );
     },
 
     renderPasswordConfirm() {
-        const Field = sdk.getComponent('elements.Field');
-        return <Field
-            id="mx_RegistrationForm_passwordConfirm"
-            ref={field => this[FIELD_PASSWORD_CONFIRM] = field}
-            type="password"
-            autoComplete="new-password"
-            label={_t("Confirm")}
-            value={this.state.passwordConfirm}
-            onChange={this.onPasswordConfirmChange}
-            onValidate={this.onPasswordConfirmValidate}
-        />;
+        const Field = sdk.getComponent("elements.Field");
+        return (
+            <Field
+                id="mx_RegistrationForm_passwordConfirm"
+                ref={(field) => (this[FIELD_PASSWORD_CONFIRM] = field)}
+                type="password"
+                autoComplete="new-password"
+                label={_t("Confirm")}
+                value={this.state.passwordConfirm}
+                onChange={this.onPasswordConfirmChange}
+                onValidate={this.onPasswordConfirmValidate}
+            />
+        );
     },
 
     renderPhoneNumber() {
         if (!this._showPhoneNumber()) {
             return null;
         }
-        const CountryDropdown = sdk.getComponent('views.auth.CountryDropdown');
-        const Field = sdk.getComponent('elements.Field');
-        const phoneLabel = this._authStepIsRequired('m.login.msisdn') ?
-            _t("Phone") :
-            _t("Phone (optional)");
-        const phoneCountry = <CountryDropdown
-            value={this.state.phoneCountry}
-            isSmall={true}
-            showPrefix={true}
-            onOptionChange={this.onPhoneCountryChange}
-        />;
-        return <Field
-            id="mx_RegistrationForm_phoneNumber"
-            ref={field => this[FIELD_PHONE_NUMBER] = field}
-            type="text"
-            label={phoneLabel}
-            value={this.state.phoneNumber}
-            prefix={phoneCountry}
-            onChange={this.onPhoneNumberChange}
-            onValidate={this.onPhoneNumberValidate}
-        />;
+        const CountryDropdown = sdk.getComponent("views.auth.CountryDropdown");
+        const Field = sdk.getComponent("elements.Field");
+        const phoneLabel = this._authStepIsRequired("m.login.msisdn")
+            ? _t("Phone")
+            : _t("Phone (optional)");
+        const phoneCountry = (
+            <CountryDropdown
+                value={this.state.phoneCountry}
+                isSmall={true}
+                showPrefix={true}
+                onOptionChange={this.onPhoneCountryChange}
+            />
+        );
+        return (
+            <Field
+                id="mx_RegistrationForm_phoneNumber"
+                ref={(field) => (this[FIELD_PHONE_NUMBER] = field)}
+                type="text"
+                label={phoneLabel}
+                value={this.state.phoneNumber}
+                prefix={phoneCountry}
+                onChange={this.onPhoneNumberChange}
+                onValidate={this.onPhoneNumberValidate}
+            />
+        );
     },
 
     renderUsername() {
-        const Field = sdk.getComponent('elements.Field');
-        return <Field
-            id="mx_RegistrationForm_username"
-            ref={field => this[FIELD_USERNAME] = field}
-            type="text"
-            autoFocus={true}
-            label={_t("Username")}
-            value={this.state.username}
-            onChange={this.onUsernameChange}
-            onValidate={this.onUsernameValidate}
-        />;
+        const Field = sdk.getComponent("elements.Field");
+        return (
+            <Field
+                id="mx_RegistrationForm_username"
+                ref={(field) => (this[FIELD_USERNAME] = field)}
+                type="text"
+                autoFocus={true}
+                label={_t("Username")}
+                value={this.state.username}
+                onChange={this.onUsernameChange}
+                onValidate={this.onUsernameValidate}
+            />
+        );
     },
 
     render: function() {
-        let yourMatrixAccountText = _t('Create your OneScrin account', {
+        let yourMatrixAccountText = _t("Create your OneScrin account", {
             // serverName: this.props.serverConfig.hsName,
         });
         if (this.props.serverConfig.hsNameIsDifferent) {
             // const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
 
-            yourMatrixAccountText = _t('Create your OneScrin account',
-            //  {}, {
-            //     'underlinedServerName': () => {
-            //         return <TextWithTooltip
-            //             class="mx_Login_underlinedServerName"
-            //             tooltip={this.props.serverConfig.hsUrl}
-            //         >
-            //             {this.props.serverConfig.hsName}
-            //         </TextWithTooltip>;
-            //     },
-            // }
+            yourMatrixAccountText = _t(
+                "Create your OneScrin account",
+                //  {}, {
+                //     'underlinedServerName': () => {
+                //         return <TextWithTooltip
+                //             class="mx_Login_underlinedServerName"
+                //             tooltip={this.props.serverConfig.hsUrl}
+                //         >
+                //             {this.props.serverConfig.hsName}
+                //         </TextWithTooltip>;
+                //     },
+                // }
             );
         }
 
         let editLink = null;
         if (this.props.onEditServerDetailsClick) {
-            editLink = <a className="mx_AuthBody_editServerDetails"
-                href="#" onClick={this.props.onEditServerDetailsClick}
-            >
-                {_t('Change')}
-            </a>;
+            editLink = (
+                <a
+                    className="mx_AuthBody_editServerDetails"
+                    href="#"
+                    onClick={this.props.onEditServerDetailsClick}
+                >
+                    {_t("Change")}
+                </a>
+            );
         }
 
         const registerButton = (
-            <input className="mx_Login_submit" type="submit" value={_t("Register")} disabled={!this.props.canSubmit} />
+            <input
+                className="mx_Login_submit"
+                type="submit"
+                value={_t("Register")}
+                disabled={!this.props.canSubmit}
+            />
         );
 
         let emailHelperText = null;
         if (this._showEmail()) {
             if (this._showPhoneNumber()) {
-                emailHelperText = <div>
-                    {_t(
-                        "Set an email for account recovery. " +
-                        "Use email or phone to optionally be discoverable by existing contacts.",
-                    )}
-                </div>;
+                emailHelperText = (
+                    <div>
+                        {_t(
+                            "Set an email for account recovery. " +
+                                "Use email or phone to optionally be discoverable by existing contacts.",
+                        )}
+                    </div>
+                );
             } else {
-                emailHelperText = <div>
-                    {_t(
-                        "Set an email for account recovery. " +
-                        "Use email to optionally be discoverable by existing contacts.",
-                    )}
-                </div>;
+                emailHelperText = (
+                    <div>
+                        {_t(
+                            "Set an email for account recovery. " +
+                                "Use email to optionally be discoverable by existing contacts.",
+                        )}
+                    </div>
+                );
             }
         }
         const haveIs = Boolean(this.props.serverConfig.isUrl);
         let noIsText = null;
         if (this.props.serverRequiresIdServer && !haveIs) {
-            noIsText = <div>
-                {_t(
-                    "No identity server is configured so you cannot add an email address in order to " +
-                    "reset your password in the future.",
-                )}
-            </div>;
+            noIsText = (
+                <div>
+                    {_t(
+                        "No identity server is configured so you cannot add an email address in order to " +
+                            "reset your password in the future.",
+                    )}
+                </div>
+            );
         }
 
         return (
@@ -631,9 +687,9 @@ export default createReactClass({
                         {this.renderEmail()}
                         {this.renderPhoneNumber()}
                     </div>
-                    { emailHelperText }
-                    { noIsText }
-                    { registerButton }
+                    {emailHelperText}
+                    {noIsText}
+                    {registerButton}
                 </form>
             </div>
         );
