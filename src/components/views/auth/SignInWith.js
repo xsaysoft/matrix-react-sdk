@@ -7,18 +7,18 @@ export class SignInWith extends Component {
     
 
     render() {
-        const [name, setName] = useState("");
+        // const [name, setName] = useState("");
     
-        const [email, setEmail] = useState("");
+        // const [email, setEmail] = useState("");
 
-        const [url, setUrl] = useState("");
+        // const [url, setUrl] = useState("");
 
 
         const responseGoogle = (response) => {
             // console.log(response);
-            setName(response.profileObj.name);
-            setEmail(response.profileObj.email)
-            setUrl(respnse.profileObj.imageUrl);
+            // setName(response.profileObj.name);
+            // setEmail(response.profileObj.email)
+            // setUrl(respnse.profileObj.imageUrl);
           }
     
         return (
