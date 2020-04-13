@@ -209,10 +209,10 @@ const NetworkDropdown = ({onOptionChange, protocols = {}, selectedServerName, se
                     <MenuItemRadio
                         active={serverSelected && !selectedInstanceId}
                         onClick={handlerFactory(server, undefined)}
-                        label={_t("Matrix")}
+                        label={_t("OneScrin")}
                         className="mx_NetworkDropdown_server_network"
                     >
-                        {_t("Matrix")}
+                        {_t("OneScrin")}
                     </MenuItemRadio>
                     { entries }
                 </MenuGroup>
@@ -261,7 +261,7 @@ const NetworkDropdown = ({onOptionChange, protocols = {}, selectedServerName, se
                 networkName: instance.desc,
             });
         } else {
-            currentValue = _t("Matrix rooms");
+            currentValue = _t("OneScrin rooms");
         }
 
         content = <ContextMenuButton

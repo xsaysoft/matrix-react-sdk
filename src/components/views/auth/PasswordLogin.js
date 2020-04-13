@@ -23,6 +23,7 @@ import * as sdk from '../../../index';
 import { _t } from '../../../languageHandler';
 import SdkConfig from '../../../SdkConfig';
 import {ValidatedServerConfig} from "../../../utils/AutoDiscoveryUtils";
+import SignInWith from './SignInWith';
 
 /**
  * A pure UI component which displays a username/password form.
@@ -289,6 +290,7 @@ export default class PasswordLogin extends React.Component {
             loginType = (
                 <div className="mx_Login_type_container">
                     <label className="mx_Login_type_label">{ _t('Sign in with') }</label>
+                    {/* <SignInWith /> */}  
                     {/* <Field
                         id="mx_PasswordLogin_type"
                         element="select"
