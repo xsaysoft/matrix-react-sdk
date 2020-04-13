@@ -2230,7 +2230,7 @@
     "Server name": "Nom du serveur",
     "Add a new server...": "Ajouter un nouveau serveur…",
     "%(networkName)s rooms": "%(networkName)s salons",
-    "Matrix rooms": "Salons Matrix",
+    "OneScrin rooms": "OneScrin Matrix",
     "Keyboard Shortcuts": "Raccourcis clavier",
     "Start a conversation with someone using their name, username (like <userId/>) or email address.": "Commencez une conversation avec quelqu'un en utilisant son nom, son nom d’utilisateur (comme <userId/>) ou son adresse e-mail.",
     "a new master key signature": "une nouvelle signature de clé principale",
