@@ -1,14 +1,14 @@
 import React, { Component, useState } from 'react';
-import GoogleLogin from 'react-google-login';
+// import GoogleLogin from 'react-google-login';
 
 
 export class SignInWith extends Component {
 
-    
+
 
     render() {
         // const [name, setName] = useState("");
-    
+
         // const [email, setEmail] = useState("");
 
         // const [url, setUrl] = useState("");
@@ -20,7 +20,7 @@ export class SignInWith extends Component {
             // setEmail(response.profileObj.email)
             // setUrl(respnse.profileObj.imageUrl);
           }
-    
+
         return (
             <GoogleLogin
                 clientId=""
