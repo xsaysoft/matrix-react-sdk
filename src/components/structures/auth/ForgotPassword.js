@@ -242,13 +242,13 @@ export default createReactClass({
             );
         }
 
-        let yourMatrixAccountText = _t('Your Matrix account on %(serverName)s', {
+        let yourMatrixAccountText = _t('Your Onescrein account on %(serverName)s', {
             serverName: this.props.serverConfig.hsName,
         });
         if (this.props.serverConfig.hsNameIsDifferent) {
             const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
 
-            yourMatrixAccountText = _t('Your Matrix account on <underlinedServerName />', {}, {
+            yourMatrixAccountText = _t('Your Onescrin account on <underlinedServerName />', {}, {
                 'underlinedServerName': () => {
                     return <TextWithTooltip
                         class="mx_Login_underlinedServerName"
