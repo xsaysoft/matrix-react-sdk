@@ -259,7 +259,7 @@ function _showICEFallbackPrompt() {
                 null, { code },
             )}</p>
         </div>,
-        button: _t('Try using turn.matrix.org'),
+        button: _t('Try using turn.onescrin.citural.com.ng'),
         cancelButton: _t('OK'),
         onFinished: (allow) => {
             SettingsStore.setValue("fallbackICEServerAllowed", null, SettingLevel.DEVICE, allow);

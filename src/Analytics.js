@@ -66,7 +66,7 @@ const customVariables = {
     },
     'App Version': {
         id: 2,
-        expl: _td('The version of Riot'),
+        expl: _td('The version of Onescrin'),
         example: '15.0.0',
     },
     'User Type': {
@@ -92,11 +92,11 @@ const customVariables = {
     'Homeserver URL': {
         id: 7,
         expl: _td('Your homeserver\'s URL'),
-        example: 'https://matrix.org',
+        example: '206.189.201.54',
     },
     'Touch Input': {
         id: 8,
-        expl: _td("Whether you're using Riot on a device where touch is the primary input mechanism"),
+        expl: _td("Whether you're using Onescrin on a device where touch is the primary input mechanism"),
         example: 'false',
     },
     'Breadcrumbs': {
@@ -106,7 +106,7 @@ const customVariables = {
     },
     'Installed PWA': {
         id: 10,
-        expl: _td("Whether you're using Riot as an installed Progressive Web App"),
+        expl: _td("Whether you're using Onescrin as an installed Progressive Web App"),
         example: 'false',
     },
 };
@@ -355,7 +355,7 @@ class Analytics {
             title: _t('Analytics'),
             description: <div className="mx_AnalyticsModal">
                 <div>
-                    { _t('The information being sent to us to help make Riot better includes:') }
+                    { _t('The information being sent to us to help make Onescrin better includes:') }
                 </div>
                 <table>
                     { rows.map((row) => <tr key={row[0]}>
