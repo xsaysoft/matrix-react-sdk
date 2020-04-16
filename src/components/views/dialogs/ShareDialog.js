@@ -25,7 +25,7 @@ import * as ContextMenu from "../../structures/ContextMenu";
 import {toRightOf} from "../../structures/ContextMenu";
 
 const socials = [
-    { 
+    {
         name: 'Facebook',
         img: require("../../../../res/img/social/facebook.png"),
         url: (url) => `https://www.facebook.com/sharer/sharer.php?u=${url}`,

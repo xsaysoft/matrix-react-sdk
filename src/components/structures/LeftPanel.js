@@ -1,6 +1,6 @@
 /*
 Copyright 2015, 2016 OpenMarket Ltd
-Copyright 2019 The Matrix.org Foundation C.I.C.
+Copyright 2019 The onescrin.org Foundation C.I.C.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -63,7 +63,7 @@ const LeftPanel = createReactClass({
     },
 
     shouldComponentUpdate: function(nextProps, nextState) {
-        // MatrixChat will update whenever the user switches
+        // onescrinChat will update whenever the user switches
         // rooms, but propagating this change all the way down
         // the react tree is quite slow, so we cut this off
         // here. The RoomTiles listen for the room change

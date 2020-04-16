@@ -206,7 +206,7 @@ export default class SecurityRoomSettingsTab extends React.Component {
 
     async _hasAliases() {
         const cli = MatrixClientPeg.get();
-        if (await cli.doesServerSupportUnstableFeature("org.matrix.msc2432")) {
+        if (await cli.doesServerSupportUnstableFeature("org.onescrin.msc2432")) {
             const response = await cli.unstableGetLocalAliases(this.props.roomId);
             const localAliases = response.aliases;
             return Array.isArray(localAliases) && localAliases.length !== 0;

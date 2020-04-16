@@ -13,7 +13,7 @@ describe.skip('RoomSettings', () => {
     let parentDiv = null;
     let client = null;
     let roomSettings = null;
-    const room = testUtils.mkStubRoom('!DdJkzRliezrwpNebLk:matrix.org');
+    const room = testUtils.mkStubRoom('!DdJkzRliezrwpNebLk:onescrin.org');
 
     function expectSentStateEvent(roomId, eventType, expectedEventContent) {
         let found = false;
@@ -101,7 +101,7 @@ describe.skip('RoomSettings', () => {
 
         roomSettings.save().then(() => {
             expect(client.setRoomName.mock.calls[0].slice(0, 2))
-                .toEqual(['!DdJkzRliezrwpNebLk:matrix.org', name]);
+                .toEqual(['!DdJkzRliezrwpNebLk:onescrin.org', name]);
 
             done();
         });
@@ -113,7 +113,7 @@ describe.skip('RoomSettings', () => {
 
         roomSettings.save().then(() => {
             expect(client.setRoomTopic.mock.calls[0].slice(0, 2))
-                .toEqual(['!DdJkzRliezrwpNebLk:matrix.org', topic]);
+                .toEqual(['!DdJkzRliezrwpNebLk:onescrin.org', topic]);
 
             done();
         });
@@ -127,7 +127,7 @@ describe.skip('RoomSettings', () => {
 
         roomSettings.save().then(() => {
             expectSentStateEvent(
-                "!DdJkzRliezrwpNebLk:matrix.org",
+                "!DdJkzRliezrwpNebLk:onescrin.org",
                 "m.room.history_visibility", {history_visibility: historyVisibility},
             );
             done();
@@ -142,7 +142,7 @@ describe.skip('RoomSettings', () => {
         }, () => {
             roomSettings.save().then(() => {
                 expect(client.setRoomDirectoryVisibility.calls[0].arguments.slice(0, 2))
-                    .toEqual("!DdJkzRliezrwpNebLk:matrix.org", isRoomPublished ? "public" : "private");
+                    .toEqual("!DdJkzRliezrwpNebLk:onescrin.org", isRoomPublished ? "public" : "private");
                 done();
             });
         });
@@ -153,7 +153,7 @@ describe.skip('RoomSettings', () => {
 
         roomSettings.save().then(() => {
             expectSentStateEvent(
-                "!DdJkzRliezrwpNebLk:matrix.org",
+                "!DdJkzRliezrwpNebLk:onescrin.org",
                 "m.room.power_levels", { invite: 42 },
             );
             done();
@@ -167,7 +167,7 @@ describe.skip('RoomSettings', () => {
             // We expect all state events to be set to the state_default (50)
             // See powerLevelDescriptors in RoomSettings
             expectSentStateEvent(
-                "!DdJkzRliezrwpNebLk:matrix.org",
+                "!DdJkzRliezrwpNebLk:onescrin.org",
                 "m.room.power_levels", {
                     events: {
                         'm.room.message': 42,

@@ -45,7 +45,7 @@ async function checkIdentityServerUrl(u) {
     // XXX: duplicated logic from js-sdk but it's quite tied up in the validation logic in the
     // js-sdk so probably as easy to duplicate it than to separate it out so we can reuse it
     try {
-        const response = await fetch(u + '/_matrix/identity/api/v1');
+        const response = await fetch(u + '/_onescrin/identity/api/v1');
         if (response.ok) {
             return null;
         } else if (response.status < 200 || response.status >= 300) {

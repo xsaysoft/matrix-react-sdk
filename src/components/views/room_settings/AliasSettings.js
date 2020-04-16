@@ -126,7 +126,7 @@ export default class AliasSettings extends React.Component {
         try {
             const cli = MatrixClientPeg.get();
             let localAliases = [];
-            if (await cli.doesServerSupportUnstableFeature("org.matrix.msc2432")) {
+            if (await cli.doesServerSupportUnstableFeature("org.onescrin.msc2432")) {
                 const response = await cli.unstableGetLocalAliases(this.props.roomId);
                 if (Array.isArray(response.aliases)) {
                     localAliases = response.aliases;
@@ -382,7 +382,7 @@ export default class AliasSettings extends React.Component {
                 />
                 <span className='mx_SettingsTab_subheading mx_AliasSettings_localAliasHeader'>{_t("Local Addresses")}</span>
                 <p>{_t("Set addresses for this room so users can find this room through your homeserver")}</p>
-                <details onToggle={this.onLocalAliasesToggled}> 
+                <details onToggle={this.onLocalAliasesToggled}>
                     <summary>{ this.state.detailsOpen ? _t('Show less') : _t("Show more")}</summary>
                     {localAliasesList}
                 </details>
