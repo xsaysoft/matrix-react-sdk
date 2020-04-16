@@ -242,7 +242,7 @@ export default createReactClass({
             );
         }
 
-        let yourMatrixAccountText = _t('Your Onescrein account on %(serverName)s', {
+        let yourMatrixAccountText = _t('Your Onescrin account on %(serverName)s', {
             serverName: this.props.serverConfig.hsName,
         });
         if (this.props.serverConfig.hsNameIsDifferent) {
@@ -266,7 +266,7 @@ export default createReactClass({
             editLink = <a className="mx_AuthBody_editServerDetails"
                 href="#" onClick={this.onEditServerDetailsClick}
             >
-                {_t('Change')}
+                {/* {_t('Change')} */}
             </a>;
         }
 

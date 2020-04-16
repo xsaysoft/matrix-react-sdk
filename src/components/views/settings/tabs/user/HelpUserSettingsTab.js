@@ -126,7 +126,7 @@ export default class HelpUserSettingsTab extends React.Component {
                         CC-BY-SA 4.0</a>.
                     </li>
                     <li>
-                        The <a href="https://github.com/onescrin-org/twemoji-colr" rel="noreferrer noopener"
+                        The <a href="https://github.com/onescrin-com.ng/twemoji-colr" rel="noreferrer noopener"
                                target="_blank"> twemoji-colr</a> font is ©&nbsp;
                         <a href="https://mozilla.org" rel="noreferrer noopener" target="_blank">Mozilla Foundation</a>{' '}
                         used under the terms of&nbsp;
@@ -210,11 +210,11 @@ export default class HelpUserSettingsTab extends React.Component {
                             </AccessibleButton>
                         </div>
                         {
-                            _t( "To report a Onescrin-related security issue, please read the Onescrin.org " +
+                            _t( "To report a Onescrin-related security issue, please read the Onescrin.com.ng " +
                                 "<a>Security Disclosure Policy</a>.", {},
                                 {
                                     'a': (sub) =>
-                                        <a href="https://onescrin.org/security-disclosure-policy/"
+                                        <a href="https://onescrin.com.ng/security-disclosure-policy/"
                                         rel="noreferrer noopener" target="_blank">{sub}</a>,
                                 })
                         }
