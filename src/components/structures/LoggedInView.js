@@ -27,7 +27,7 @@ import PageTypes from '../../PageTypes';
 import CallMediaHandler from '../../CallMediaHandler';
 import { fixupColorFonts } from '../../utils/FontManager';
 import * as sdk from '../../index';
-import dis from '../../dispatcher'; 
+import dis from '../../dispatcher';
 import sessionStore from '../../stores/SessionStore';
 import {MatrixClientPeg} from '../../MatrixClientPeg';
 import SettingsStore from "../../settings/SettingsStore";

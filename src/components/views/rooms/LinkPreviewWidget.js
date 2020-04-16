@@ -92,7 +92,7 @@ export default createReactClass({
             width: p["og:image:width"],
             height: p["og:image:height"],
             name: p["og:title"] || p["og:description"] || this.props.link,
-            fileSize: p["matrix:image:size"],
+            fileSize: p["onescrin:image:size"],
             link: this.props.link,
         };
 

@@ -379,7 +379,7 @@ class TextHighlighter extends BaseHighlighter {
  * opts.ref: React ref to attach to any React components returned (not compatible with opts.returnString)
  */
 export function bodyToHtml(content, highlights, opts={}) {
-    const isHtmlMessage = content.format === "org.matrix.custom.html" && content.formatted_body;
+    const isHtmlMessage = content.format === "org.onescrin.custom.html" && content.formatted_body;
     let bodyHasEmoji = false;
 
     let sanitizeParams = sanitizeHtmlParams;

@@ -126,7 +126,7 @@ export default class HelpUserSettingsTab extends React.Component {
                         CC-BY-SA 4.0</a>.
                     </li>
                     <li>
-                        The <a href="https://github.com/matrix-org/twemoji-colr" rel="noreferrer noopener"
+                        The <a href="https://github.com/onescrin-com.ng/twemoji-colr" rel="noreferrer noopener"
                                target="_blank"> twemoji-colr</a> font is ©&nbsp;
                         <a href="https://mozilla.org" rel="noreferrer noopener" target="_blank">Mozilla Foundation</a>{' '}
                         used under the terms of&nbsp;
@@ -147,17 +147,17 @@ export default class HelpUserSettingsTab extends React.Component {
     }
 
     render() {
-        let faqText = _t('For help with using Onescrin, click <a>here</a>.', {}, {
+        let faqText = _t('For help with using Riot, click <a>here</a>.', {}, {
             'a': (sub) =>
-                <a href="https://onescrin.citural.com.ng" rel="noreferrer noopener" target="_blank">{sub}</a>,
+                <a href="https://about.riot.im/need-help/" rel="noreferrer noopener" target="_blank">{sub}</a>,
         });
         if (SdkConfig.get().welcomeUserId && getCurrentLanguage().startsWith('en')) {
             faqText = (
                 <div>
                     {
-                        _t('For help with using Onescrin, click <a>here</a> or start a chat with our ' +
+                        _t('For help with using Riot, click <a>here</a> or start a chat with our ' +
                             'bot using the button below.', {}, {
-                            'a': (sub) => <a href="https://onescrin.citural.com.ng" rel='noreferrer noopener'
+                            'a': (sub) => <a href="https://about.riot.im/need-help/" rel='noreferrer noopener'
                                              target='_blank'>{sub}</a>,
                         })
                     }
@@ -210,11 +210,11 @@ export default class HelpUserSettingsTab extends React.Component {
                             </AccessibleButton>
                         </div>
                         {
-                            _t( "To report a Onescrin-related security issue, please read the " +
+                            _t( "To report a Onescrin-related security issue, please read the Onescrin.com.ng " +
                                 "<a>Security Disclosure Policy</a>.", {},
                                 {
                                     'a': (sub) =>
-                                        <a href="https://onescrin.citural.com.ng/"
+                                        <a href="https://onescrin.com.ng/security-disclosure-policy/"
                                         rel="noreferrer noopener" target="_blank">{sub}</a>,
                                 })
                         }
@@ -232,13 +232,13 @@ export default class HelpUserSettingsTab extends React.Component {
                 <div className='mx_SettingsTab_section mx_HelpUserSettingsTab_versions'>
                     <span className='mx_SettingsTab_subheading'>{_t("Versions")}</span>
                     <div className='mx_SettingsTab_subsectionText'>
-                        {_t("Onescrin version:")} {vectorVersion}<br />
-                        {/* {_t("olm version:")} {olmVersion}<br /> */}
+                        {_t("riot-web version:")} {vectorVersion}<br />
+                        {_t("olm version:")} {olmVersion}<br />
                         {updateButton}
                     </div>
                 </div>
                 {this._renderLegal()}
-                {/* {this._renderCredits()} */}
+                {this._renderCredits()}
                 <div className='mx_SettingsTab_section mx_HelpUserSettingsTab_versions'>
                     <span className='mx_SettingsTab_subheading'>{_t("Advanced")}</span>
                     <div className='mx_SettingsTab_subsectionText'>

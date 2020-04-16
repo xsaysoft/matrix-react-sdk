@@ -328,7 +328,7 @@ export default createReactClass({
                     const ErrorDialog = sdk.getComponent("dialogs.ErrorDialog");
                     Modal.createTrackedDialog('Room not found', '', ErrorDialog, {
                         title: _t('Room not found'),
-                        description: _t('Couldn\'t find a matching Matrix room'),
+                        description: _t('Couldn\'t find a matching Onescrin room'),
                     });
                 }
             }, (e) => {

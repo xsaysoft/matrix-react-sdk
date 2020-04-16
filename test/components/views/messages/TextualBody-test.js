@@ -111,7 +111,7 @@ describe("<TextualBody />", () => {
                 room: "room_id",
                 user: "sender",
                 content: {
-                    body: "Visit https://matrix.org/",
+                    body: "Visit https://onescrin.org/",
                     msgtype: "m.text",
                 },
                 event: true,
@@ -121,8 +121,8 @@ describe("<TextualBody />", () => {
             expect(wrapper.text()).toBe(ev.getContent().body);
             const content = wrapper.find(".mx_EventTile_body");
             expect(content.html()).toBe('<span class="mx_EventTile_body" dir="auto">' +
-                'Visit <a href="https://matrix.org/" class="linkified" target="_blank" rel="noreferrer noopener">' +
-                'https://matrix.org/</a></span>');
+                'Visit <a href="https://onescrin.org/" class="linkified" target="_blank" rel="noreferrer noopener">' +
+                'https://onescrin.org/</a></span>');
         });
     });
 
@@ -146,7 +146,7 @@ describe("<TextualBody />", () => {
                 content: {
                     body: "foo *baz* __bar__ <del>del</del> <u>u</u>",
                     msgtype: "m.text",
-                    format: "org.matrix.custom.html",
+                    format: "org.onescrin.custom.html",
                     formatted_body: "foo <em>baz</em> <strong>bar</strong> <del>del</del> <u>u</u>",
                 },
                 event: true,
@@ -167,7 +167,7 @@ describe("<TextualBody />", () => {
                 content: {
                     body: "Hey [Spoiler for movie](mxc://someserver/somefile)",
                     msgtype: "m.text",
-                    format: "org.matrix.custom.html",
+                    format: "org.onescrin.custom.html",
                     formatted_body: "Hey <span data-mx-spoiler=\"movie\">the movie was awesome</span>",
                 },
                 event: true,
@@ -193,8 +193,8 @@ describe("<TextualBody />", () => {
                 content: {
                     body: "Hey User",
                     msgtype: "m.text",
-                    format: "org.matrix.custom.html",
-                    formatted_body: "Hey <a href=\"https://matrix.to/#/@user:server\">Member</a>",
+                    format: "org.onescrin.custom.html",
+                    formatted_body: "Hey <a href=\"https://onescrin.to/#/@user:server\">Member</a>",
                 },
                 event: true,
             });
@@ -225,7 +225,7 @@ describe("<TextualBody />", () => {
             room: "room_id",
             user: "sender",
             content: {
-                body: "Visit https://matrix.org/",
+                body: "Visit https://onescrin.org/",
                 msgtype: "m.text",
             },
             event: true,
@@ -237,7 +237,7 @@ describe("<TextualBody />", () => {
         let widgets = wrapper.find("LinkPreviewWidget");
         // at this point we should have exactly one widget
         expect(widgets.length).toBe(1);
-        expect(widgets.at(0).prop("link")).toBe("https://matrix.org/");
+        expect(widgets.at(0).prop("link")).toBe("https://onescrin.org/");
 
         // simulate an event edit and check the transition from the old URL preview to the new one
         const ev2 = mkEvent({
