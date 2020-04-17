@@ -177,7 +177,7 @@ export default createReactClass({
             this.setState({
                 loading: false,
                 error:
-                    `${_t('Riot failed to get the public room list.')} ` +
+                    `${_t('Failed to get the public room list.')} ` +
                     `${(err && err.message) ? err.message : _t('The homeserver may be unavailable or overloaded.')}`
                 ,
             });
