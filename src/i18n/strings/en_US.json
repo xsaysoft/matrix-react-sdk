@@ -685,7 +685,7 @@
     "Your Onescrin is misconfigured": "Your Onescrin is misconfigured",
     "Call failed due to misconfigured server": "Call failed due to misconfigured server",
     "Please ask the administrator of your homeserver (<code>%(homeserverDomain)s</code>) to configure a TURN server in order for calls to work reliably.": "Please ask the administrator of your homeserver (<code>%(homeserverDomain)s</code>) to configure a TURN server in order for calls to work reliably.",
-    "Try using turn.onescrin.citural.come.ng": "Try using turn.onescrin.citural.com.ng",
+    "Try using turn.onescrin.citural.com.ng": "Try using turn.onescrin.citural.com.ng",
     "Messages": "Messages",
     "Actions": "Actions",
     "Other": "Other"

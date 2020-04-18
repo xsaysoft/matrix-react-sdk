@@ -253,7 +253,7 @@ function _showICEFallbackPrompt() {
             )}</p>
             <p>{_t(
                 "Alternatively, you can try to use the public server at " +
-                "<code>turn.matrix.org</code>, but this will not be as reliable, and " +
+                "<code>turn.onescrin.citural.com.ng</code>, but this will not be as reliable, and " +
                 "it will share your IP address with that server. You can also manage " +
                 "this in Settings.",
                 null, { code },
