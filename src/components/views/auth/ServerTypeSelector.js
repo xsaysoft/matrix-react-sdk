@@ -32,8 +32,10 @@ export const TYPES = {
         logo: () => <img src={require('../../../../res/img/matrix-org-bw-logo.svg')} />,
         description: () => _t('Join millions for free on the largest public server'),
         serverConfig: makeType(ValidatedServerConfig, {
-            hsUrl: "http://206.189.201.54:8008",
-            hsName: "206.189.201.54:8008",
+            // hsUrl: "http://206.189.201.54:8008",
+            hsUrl: "https://host.onescrin.com.ng",
+            // hsName: "206.189.201.54:8008",
+            hsName: "host.onescrin.com.ng",
             hsNameIsDifferent: false,
             isUrl: "https://vector.im",
         }),
