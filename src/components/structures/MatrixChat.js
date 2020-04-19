@@ -1769,9 +1769,9 @@ export default createReactClass({
         });
     },
 
-    // onRegisterClick: function() {
-    //     this.showScreen("register");
-    // },
+    onRegisterClick: function() {
+        this.showScreen("register");
+    },
 
     onLoginClick: function() {
         this.showScreen("login");
@@ -1781,14 +1781,14 @@ export default createReactClass({
         this.showScreen("forgot_password");
     },
 
-    // onRegisterFlowComplete: function(credentials, password) {
-    //     return this.onUserCompletedLoginFlow(credentials, password);
-    // },
+    onRegisterFlowComplete: function(credentials, password) {
+        return this.onUserCompletedLoginFlow(credentials, password);
+    },
 
     // returns a promise which resolves to the new MatrixClient
-    // onRegistered: function(credentials) {
-    //     return Lifecycle.setLoggedIn(credentials);
-    // },
+    onRegistered: function(credentials) {
+        return Lifecycle.setLoggedIn(credentials);
+    },
 
     onFinishPostRegistration: function() {
         // Don't confuse this with "PageType" which is the middle window to show
@@ -1993,7 +1993,7 @@ export default createReactClass({
                     <LoggedInView ref={this._collectLoggedInView} matrixClient={MatrixClientPeg.get()}
                         onRoomCreated={this.onRoomCreated}
                         onCloseAllSettings={this.onCloseAllSettings}
-                        // onRegistered={this.onRegistered}
+                        onRegistered={this.onRegistered}
                         currentRoomId={this.state.currentRoomId}
                         showCookieBar={this.state.showCookieBar}
                         {...this.props}

@@ -14,10 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import {_t, getCurrentLanguage} from "../../../../../languageHandler";
-import {MatrixClientPeg} from "../../../../../MatrixClientPeg";
+import React from "react";
+import PropTypes from "prop-types";
+import { _t, getCurrentLanguage } from "../../../../../languageHandler";
+import { MatrixClientPeg } from "../../../../../MatrixClientPeg";
 import AccessibleButton from "../../../elements/AccessibleButton";
 import SdkConfig from "../../../../../SdkConfig";
 import createRoom from "../../../../../createRoom";
@@ -41,12 +41,18 @@ export default class HelpUserSettingsTab extends React.Component {
     }
 
     componentWillMount(): void {
-        PlatformPeg.get().getAppVersion().then((ver) => this.setState({vectorVersion: ver})).catch((e) => {
-            console.error("Error getting vector version: ", e);
-        });
-        PlatformPeg.get().canSelfUpdate().then((v) => this.setState({canUpdate: v})).catch((e) => {
-            console.error("Error getting self updatability: ", e);
-        });
+        PlatformPeg.get()
+            .getAppVersion()
+            .then((ver) => this.setState({ vectorVersion: ver }))
+            .catch((e) => {
+                console.error("Error getting vector version: ", e);
+            });
+        PlatformPeg.get()
+            .canSelfUpdate()
+            .then((v) => this.setState({ canUpdate: v }))
+            .catch((e) => {
+                console.error("Error getting self updatability: ", e);
+            });
     }
 
     _onClearCacheAndReload = (e) => {
@@ -56,9 +62,11 @@ export default class HelpUserSettingsTab extends React.Component {
         // stopping in the middle of the logs.
         console.log("Clear cache & reload clicked");
         MatrixClientPeg.get().stopClient();
-        MatrixClientPeg.get().store.deleteAllData().then(() => {
-            PlatformPeg.get().reload();
-        });
+        MatrixClientPeg.get()
+            .store.deleteAllData()
+            .then(() => {
+                PlatformPeg.get().reload();
+            });
     };
 
     _onBugReport = (e) => {
@@ -66,7 +74,7 @@ export default class HelpUserSettingsTab extends React.Component {
         if (!BugReportDialog) {
             return;
         }
-        Modal.createTrackedDialog('Bug Report Dialog', '', BugReportDialog, {});
+        Modal.createTrackedDialog("Bug Report Dialog", "", BugReportDialog, {});
     };
 
     _onStartBotChat = (e) => {
@@ -79,7 +87,7 @@ export default class HelpUserSettingsTab extends React.Component {
 
     _showSpoiler = (event) => {
         const target = event.target;
-        target.innerHTML = target.getAttribute('data-spoiler');
+        target.innerHTML = target.getAttribute("data-spoiler");
 
         const range = document.createRange();
         range.selectNodeContents(target);
@@ -95,74 +103,108 @@ export default class HelpUserSettingsTab extends React.Component {
 
         const legalLinks = [];
         for (const tocEntry of SdkConfig.get().terms_and_conditions_links) {
-            legalLinks.push(<div key={tocEntry.url}>
-                <a href={tocEntry.url} rel="noreferrer noopener" target="_blank">{tocEntry.text}</a>
-            </div>);
+            legalLinks.push(
+                <div key={tocEntry.url}>
+                    <a
+                        href={tocEntry.url}
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
+                        {tocEntry.text}
+                    </a>
+                </div>
+            );
         }
 
         return (
-            <div className='mx_SettingsTab_section mx_HelpUserSettingsTab_versions'>
-                <span className='mx_SettingsTab_subheading'>{_t("Legal")}</span>
-                <div className='mx_SettingsTab_subsectionText'>
+            <div className="mx_SettingsTab_section mx_HelpUserSettingsTab_versions">
+                <span className="mx_SettingsTab_subheading">{_t("Legal")}</span>
+                <div className="mx_SettingsTab_subsectionText">
                     {legalLinks}
                 </div>
             </div>
         );
     }
 
-    _renderCredits() {
-        // Note: This is not translated because it is legal text.
-        // Also, &nbsp; is ugly but necessary.
-        return (
-            <div className='mx_SettingsTab_section'>
-                <span className='mx_SettingsTab_subheading'>{_t("Credits")}</span>
-                <ul>
-                    <li>
-                        The <a href="themes/riot/img/backgrounds/valley.jpg" rel="noreferrer noopener" target="_blank">
-                        default cover photo</a> is ©&nbsp;
-                        <a href="https://www.flickr.com/golan" rel="noreferrer noopener" target="_blank">Jesús Roncero</a>{' '}
-                        used under the terms of&nbsp;
-                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noreferrer noopener" target="_blank">
-                        CC-BY-SA 4.0</a>.
-                    </li>
-                    <li>
-                        The <a href="https://github.com/onescrin-com.ng/twemoji-colr" rel="noreferrer noopener"
-                               target="_blank"> twemoji-colr</a> font is ©&nbsp;
-                        <a href="https://mozilla.org" rel="noreferrer noopener" target="_blank">Mozilla Foundation</a>{' '}
-                        used under the terms of&nbsp;
-                        <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="noreferrer noopener" target="_blank">
-                        Apache 2.0</a>.
-                    </li>
-                    <li>
-                        The <a href="https://twemoji.twitter.com/" rel="noreferrer noopener" target="_blank">
-                        Twemoji</a> emoji art is ©&nbsp;
-                        <a href="https://twemoji.twitter.com/" rel="noreferrer noopener" target="_blank">Twitter, Inc and other
-                        contributors</a> used under the terms of&nbsp;
-                        <a href="https://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener" target="_blank">
-                        CC-BY 4.0</a>.
-                    </li>
-                </ul>
-            </div>
-        );
-    }
+    // _renderCredits() {
+    //     // Note: This is not translated because it is legal text.
+    //     // Also, &nbsp; is ugly but necessary.
+    //     return (
+    //         <div className='mx_SettingsTab_section'>
+    //             <span className='mx_SettingsTab_subheading'>{_t("Credits")}</span>
+    //             <ul>
+    //                 <li>
+    //                     The <a href="themes/riot/img/backgrounds/valley.jpg" rel="noreferrer noopener" target="_blank">
+    //                     default cover photo</a> is ©&nbsp;
+    //                     <a href="https://www.flickr.com/golan" rel="noreferrer noopener" target="_blank">Jesús Roncero</a>{' '}
+    //                     used under the terms of&nbsp;
+    //                     <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noreferrer noopener" target="_blank">
+    //                     CC-BY-SA 4.0</a>.
+    //                 </li>
+    //                 <li>
+    //                     The <a href="https://github.com/onescrin-com.ng/twemoji-colr" rel="noreferrer noopener"
+    //                            target="_blank"> twemoji-colr</a> font is ©&nbsp;
+    //                     <a href="https://mozilla.org" rel="noreferrer noopener" target="_blank">Mozilla Foundation</a>{' '}
+    //                     used under the terms of&nbsp;
+    //                     <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="noreferrer noopener" target="_blank">
+    //                     Apache 2.0</a>.
+    //                 </li>
+    //                 <li>
+    //                     The <a href="https://twemoji.twitter.com/" rel="noreferrer noopener" target="_blank">
+    //                     Twemoji</a> emoji art is ©&nbsp;
+    //                     <a href="https://twemoji.twitter.com/" rel="noreferrer noopener" target="_blank">Twitter, Inc and other
+    //                     contributors</a> used under the terms of&nbsp;
+    //                     <a href="https://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener" target="_blank">
+    //                     CC-BY 4.0</a>.
+    //                 </li>
+    //             </ul>
+    //         </div>
+    //     );
+    // }
 
     render() {
-        let faqText = _t('For help with using Riot, click <a>here</a>.', {}, {
-            'a': (sub) =>
-                <a href="https://about.riot.im/need-help/" rel="noreferrer noopener" target="_blank">{sub}</a>,
-        });
-        if (SdkConfig.get().welcomeUserId && getCurrentLanguage().startsWith('en')) {
+        let faqText = _t(
+            "For help with using Onescrin, click <a>here</a>.",
+            {},
+            {
+                a: (sub) => (
+                    <a
+                        href="https://onescrin.citural.com.ng"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
+                        {sub}
+                    </a>
+                ),
+            }
+        );
+        if (
+            SdkConfig.get().welcomeUserId &&
+            getCurrentLanguage().startsWith("en")
+        ) {
             faqText = (
                 <div>
-                    {
-                        _t('For help with using Riot, click <a>here</a> or start a chat with our ' +
-                            'bot using the button below.', {}, {
-                            'a': (sub) => <a href="https://about.riot.im/need-help/" rel='noreferrer noopener'
-                                             target='_blank'>{sub}</a>,
-                        })
-                    }
+                    {_t(
+                        "For help with using Onescrin, click <a>here</a> or start a chat with our " +
+                            "bot using the button below.",
+                        {},
+                        {
+                            a: (sub) => (
+                                <a
+                                    href="https://about.riot.im/need-help/"
+                                    rel="noreferrer noopener"
+                                    target="_blank"
+                                >
+                                    {sub}
+                                </a>
+                            ),
+                        }
+                    )}
                     <div>
-                        <AccessibleButton onClick={this._onStartBotChat} kind='primary'>
+                        <AccessibleButton
+                            onClick={this._onStartBotChat}
+                            kind="primary"
+                        >
                             {_t("Chat with Scrin Bot")}
                         </AccessibleButton>
                     </div>
@@ -170,84 +212,124 @@ export default class HelpUserSettingsTab extends React.Component {
             );
         }
 
-        const vectorVersion = this.state.vectorVersion || 'unknown';
+        const vectorVersion = this.state.vectorVersion || "unknown";
 
         let olmVersion = MatrixClientPeg.get().olmVersion;
-        olmVersion = olmVersion ? `${olmVersion[0]}.${olmVersion[1]}.${olmVersion[2]}` : '<not-enabled>';
+        olmVersion = olmVersion
+            ? `${olmVersion[0]}.${olmVersion[1]}.${olmVersion[2]}`
+            : "<not-enabled>";
 
         let updateButton = null;
         if (this.state.canUpdate) {
             const platform = PlatformPeg.get();
             updateButton = (
-                <AccessibleButton onClick={platform.startUpdateCheck} kind='primary'>
-                    {_t('Check for update')}
+                <AccessibleButton
+                    onClick={platform.startUpdateCheck}
+                    kind="primary"
+                >
+                    {_t("Check for update")}
                 </AccessibleButton>
             );
         }
 
         return (
             <div className="mx_SettingsTab mx_HelpUserSettingsTab">
-                <div className="mx_SettingsTab_heading">{_t("Help & About")}</div>
+                <div className="mx_SettingsTab_heading">
+                    {_t("Help & About")}
+                </div>
                 <div className="mx_SettingsTab_section">
-                    <span className='mx_SettingsTab_subheading'>{_t('Bug reporting')}</span>
-                    <div className='mx_SettingsTab_subsectionText'>
-                        {
-                            _t( "If you've submitted a bug via GitHub, debug logs can help " +
+                    <span className="mx_SettingsTab_subheading">
+                        {_t("Bug reporting")}
+                    </span>
+                    <div className="mx_SettingsTab_subsectionText">
+                        {_t(
+                            "If you've submitted a bug via GitHub, debug logs can help " +
                                 "us track down the problem. Debug logs contain application " +
                                 "usage data including your username, the IDs or aliases of " +
                                 "the rooms or groups you have visited and the usernames of " +
-                                "other users. They do not contain messages.",
-                            )
-                        }
-                        <div className='mx_HelpUserSettingsTab_debugButton'>
-                            <AccessibleButton onClick={this._onBugReport} kind='primary'>
+                                "other users. They do not contain messages."
+                        )}
+                        <div className="mx_HelpUserSettingsTab_debugButton">
+                            <AccessibleButton
+                                onClick={this._onBugReport}
+                                kind="primary"
+                            >
                                 {_t("Submit debug logs")}
                             </AccessibleButton>
                         </div>
-                        <div className='mx_HelpUserSettingsTab_debugButton'>
-                            <AccessibleButton onClick={this._onClearCacheAndReload} kind='danger'>
+                        <div className="mx_HelpUserSettingsTab_debugButton">
+                            <AccessibleButton
+                                onClick={this._onClearCacheAndReload}
+                                kind="danger"
+                            >
                                 {_t("Clear cache and reload")}
                             </AccessibleButton>
                         </div>
-                        {
-                            _t( "To report a Onescrin-related security issue, please read the Onescrin.com.ng " +
-                                "<a>Security Disclosure Policy</a>.", {},
-                                {
-                                    'a': (sub) =>
-                                        <a href="https://onescrin.com.ng/security-disclosure-policy/"
-                                        rel="noreferrer noopener" target="_blank">{sub}</a>,
-                                })
-                        }
+                        {_t(
+                            "To report a Onescrin-related security issue, please read the " +
+                                "<a>Security Disclosure Policy</a>.",
+                            {},
+                            {
+                                a: (sub) => (
+                                    <a
+                                        href="https://onescrin.com.ng/security-disclosure-policy/"
+                                        rel="noreferrer noopener"
+                                        target="_blank"
+                                    >
+                                        {sub}
+                                    </a>
+                                ),
+                            }
+                        )}
                     </div>
                 </div>
-                <div className='mx_SettingsTab_section'>
-                    <span className='mx_SettingsTab_subheading'>{_t("FAQ")}</span>
-                    <div className='mx_SettingsTab_subsectionText'>
+                <div className="mx_SettingsTab_section">
+                    <span className="mx_SettingsTab_subheading">
+                        {_t("FAQ")}
+                    </span>
+                    <div className="mx_SettingsTab_subsectionText">
                         {faqText}
                     </div>
-                    <AccessibleButton kind="primary" onClick={KeyboardShortcuts.toggleDialog}>
-                        { _t("Keyboard Shortcuts") }
+                    <AccessibleButton
+                        kind="primary"
+                        onClick={KeyboardShortcuts.toggleDialog}
+                    >
+                        {_t("Keyboard Shortcuts")}
                     </AccessibleButton>
                 </div>
-                <div className='mx_SettingsTab_section mx_HelpUserSettingsTab_versions'>
-                    <span className='mx_SettingsTab_subheading'>{_t("Versions")}</span>
-                    <div className='mx_SettingsTab_subsectionText'>
-                        {_t("riot-web version:")} {vectorVersion}<br />
-                        {_t("olm version:")} {olmVersion}<br />
+                <div className="mx_SettingsTab_section mx_HelpUserSettingsTab_versions">
+                    <span className="mx_SettingsTab_subheading">
+                        {_t("Versions")}
+                    </span>
+                    <div className="mx_SettingsTab_subsectionText">
+                        {_t("Onescrin version:")} {vectorVersion}
+                        <br />
+                        {/* {_t("olm version:")} {olmVersion}<br /> */}
                         {updateButton}
                     </div>
                 </div>
                 {this._renderLegal()}
-                {this._renderCredits()}
-                <div className='mx_SettingsTab_section mx_HelpUserSettingsTab_versions'>
-                    <span className='mx_SettingsTab_subheading'>{_t("Advanced")}</span>
-                    <div className='mx_SettingsTab_subsectionText'>
-                        {_t("Homeserver is")} <code>{MatrixClientPeg.get().getHomeserverUrl()}</code><br />
-                        {_t("Identity Server is")} <code>{MatrixClientPeg.get().getIdentityServerUrl()}</code><br />
-                        {_t("Access Token:") + ' '}
-                        <AccessibleButton element="span" onClick={this._showSpoiler}
-                                          data-spoiler={MatrixClientPeg.get().getAccessToken()}>
-                            &lt;{ _t("click to reveal") }&gt;
+                {/* {this._renderCredits()} */}
+                <div className="mx_SettingsTab_section mx_HelpUserSettingsTab_versions">
+                    <span className="mx_SettingsTab_subheading">
+                        {_t("Advanced")}
+                    </span>
+                    <div className="mx_SettingsTab_subsectionText">
+                        {_t("Homeserver is")}{" "}
+                        <code>{MatrixClientPeg.get().getHomeserverUrl()}</code>
+                        <br />
+                        {_t("Identity Server is")}{" "}
+                        <code>
+                            {MatrixClientPeg.get().getIdentityServerUrl()}
+                        </code>
+                        <br />
+                        {_t("Access Token:") + " "}
+                        <AccessibleButton
+                            element="span"
+                            onClick={this._showSpoiler}
+                            data-spoiler={MatrixClientPeg.get().getAccessToken()}
+                        >
+                            &lt;{_t("click to reveal")}&gt;
                         </AccessibleButton>
                     </div>
                 </div>
