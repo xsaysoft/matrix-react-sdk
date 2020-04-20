@@ -52,7 +52,7 @@ export default class SetIntegrationManager extends React.Component {
         if (currentManager) {
             managerName = `(${currentManager.name})`;
             bodyText = _t(
-                "Use an Integration Manager <b>(%(serverName)s)</b> to manage bots, widgets, " +
+                "Use an Integration Manager to manage bots, widgets, " +
                 "and sticker packs.",
                 {serverName: currentManager.name},
                 { b: sub => <b>{sub}</b> },
@@ -65,7 +65,7 @@ export default class SetIntegrationManager extends React.Component {
             <div className='mx_SetIntegrationManager'>
                 <div className="mx_SettingsTab_heading">
                     <span>{_t("Manage integrations")}</span>
-                    <span className="mx_SettingsTab_subheading">{managerName}</span>
+                    {/* <span className="mx_SettingsTab_subheading">{managerName}</span> */}
                     <ToggleSwitch checked={this.state.provisioningEnabled} onChange={this.onProvisioningToggled} />
                 </div>
                 <span className="mx_SettingsTab_subsectionText">

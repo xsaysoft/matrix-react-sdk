@@ -48,7 +48,7 @@ export default class LabsUserSettingsTab extends React.Component {
         const flags = SettingsStore.getLabsFeatures().map(f => <LabsSettingToggle featureId={f} key={f} />);
         return (
             <div className="mx_SettingsTab">
-                <div className="mx_SettingsTab_heading">{_t("Labs")}</div>
+                {/* <div className="mx_SettingsTab_heading">{_t("Labs")}</div>
                 <div className='mx_SettingsTab_subsectionText'>
                     {
                         _t('Customise your experience with experimental labs features. ' +
@@ -59,7 +59,7 @@ export default class LabsUserSettingsTab extends React.Component {
                             },
                         })
                     }
-                </div>
+                </div> */}
                 <div className="mx_SettingsTab_section">
                     {flags}
                     <SettingsFlag name={"enableWidgetScreenshots"} level={SettingLevel.ACCOUNT} />

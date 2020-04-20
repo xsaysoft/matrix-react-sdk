@@ -227,7 +227,7 @@ export default class SetIdServer extends React.Component {
             const [confirmed] = await this._showServerChangeWarning({
                 title: _t("Disconnect identity server"),
                 unboundMessage: _t(
-                    "Disconnect from the identity server <idserver />?", {},
+                    "Disconnect from the identity server?", {},
                     {idserver: sub => <b>{abbreviateUrl(this.state.currentClientIdServer)}</b>},
                 ),
                 button: _t("Disconnect"),
@@ -344,9 +344,9 @@ export default class SetIdServer extends React.Component {
         let sectionTitle;
         let bodyText;
         if (idServerUrl) {
-            sectionTitle = _t("Identity Server (%(server)s)", { server: abbreviateUrl(idServerUrl) });
+            sectionTitle = _t("Identity Server onescrin", { server: abbreviateUrl(idServerUrl) });
             bodyText = _t(
-                "You are currently using <server></server> to discover and be discoverable by " +
+                "You are currently using onescrin to discover and be discoverable by " +
                 "existing contacts you know. You can change your identity server below.",
                 {},
                 { server: sub => <b>{abbreviateUrl(idServerUrl)}</b> },
