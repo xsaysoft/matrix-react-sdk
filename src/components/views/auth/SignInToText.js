@@ -11,14 +11,14 @@ export default class SignInToText extends React.PureComponent {
     };
 
     render() {
-        let signInToText = _t("Sign in to your OneScrin account", {
+        let signInToText = _t("Sign in to your PotNG account", {
             // serverName: this.props.serverConfig.hsName,
         });
         if (this.props.serverConfig.hsNameIsDifferent) {
-            // const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
+            const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
 
             signInToText = _t(
-                "Sign in to your OneScrin account",
+                "Sign in to your PotNG account",
                 //  {}, {
                 // 'underlinedServerName': () => {
                 //     return <TextWithTooltip
@@ -32,14 +32,14 @@ export default class SignInToText extends React.PureComponent {
             );
         }
 
-        // let editLink = null;
-        // if (this.props.onEditServerDetailsClick) {
-        //     editLink = <a className="mx_AuthBody_editServerDetails"
-        //                   href="#" onClick={this.props.onEditServerDetailsClick}
-        //     >
-        //         {_t('Change')}
-        //     </a>;
-        // }
+        let editLink = null;
+        if (this.props.onEditServerDetailsClick) {
+            editLink = <a className="mx_AuthBody_editServerDetails"
+                          href="#" onClick={this.props.onEditServerDetailsClick}
+            >
+                {_t('Change')}
+            </a>;
+        }
 
         return (
             <h3>

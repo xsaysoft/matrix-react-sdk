@@ -591,14 +591,14 @@ export default createReactClass({
     },
 
     render: function() {
-        let yourMatrixAccountText = _t("Create your OneScrin account", {
+        let yourMatrixAccountText = _t("Create Your PotNg account", {
             // serverName: this.props.serverConfig.hsName,
         });
         if (this.props.serverConfig.hsNameIsDifferent) {
             // const TextWithTooltip = sdk.getComponent("elements.TextWithTooltip");
 
             yourMatrixAccountText = _t(
-                "Create your OneScrin account",
+                "Create Your PotNg account",
                 //  {}, {
                 //     'underlinedServerName': () => {
                 //         return <TextWithTooltip

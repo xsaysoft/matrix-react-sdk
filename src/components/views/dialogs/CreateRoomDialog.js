@@ -196,7 +196,7 @@ export default createReactClass({
                         { aliasField }
                         <details ref={this.collectDetailsRef} className="mx_CreateRoomDialog_details">
                             <summary className="mx_CreateRoomDialog_details_summary">{ this.state.detailsOpen ? _t('Hide advanced') : _t('Show advanced') }</summary>
-                            <LabelledToggleSwitch label={ _t('Block users on other onescrin homeservers from joining this room (This setting cannot be changed later!)')} onChange={this.onNoFederateChange} value={this.state.noFederate} />
+                            <LabelledToggleSwitch label={ _t('Block users on other PotNg homeservers from joining this room (This setting cannot be changed later!)')} onChange={this.onNoFederateChange} value={this.state.noFederate} />
                         </details>
                     </div>
                 </form>

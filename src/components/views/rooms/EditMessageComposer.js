@@ -84,7 +84,7 @@ function createEditContent(model, editedEvent) {
 
     const formattedBody = htmlSerializeIfNeeded(model, {forceHTML: isReply});
     if (formattedBody) {
-        newContent.format = "org.onescrin.custom.html";
+        newContent.format = "org.PotNg.custom.html";
         newContent.formatted_body = formattedBody;
         contentBody.format = newContent.format;
         contentBody.formatted_body = `${htmlPrefix} * ${formattedBody}`;

@@ -126,7 +126,7 @@ export default class AliasSettings extends React.Component {
         try {
             const cli = MatrixClientPeg.get();
             let localAliases = [];
-            if (await cli.doesServerSupportUnstableFeature("org.onescrin.msc2432")) {
+            if (await cli.doesServerSupportUnstableFeature("org.PotNg.msc2432")) {
                 const response = await cli.unstableGetLocalAliases(this.props.roomId);
                 if (Array.isArray(response.aliases)) {
                     localAliases = response.aliases;

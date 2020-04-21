@@ -49,7 +49,7 @@ const PHASES_ENABLED = true;
 _td("Invalid homeserver discovery response");
 _td("Failed to get autodiscovery configuration from server");
 _td("Invalid base_url for m.homeserver");
-_td("Homeserver URL does not appear to be a valid Onescrin homeserver");
+_td("Homeserver URL does not appear to be a valid PotNg homeserver");
 _td("Invalid identity server discovery response");
 _td("Invalid base_url for m.identity_server");
 _td("Identity server URL does not appear to be a valid identity server");
@@ -265,7 +265,7 @@ export default createReactClass({
                                     </div>
                                     <div className="mx_Login_smallError">
                                         {_t(
-                                            "Please note you are logging into the %(hs)s server, not onescrin.org.",
+                                            "Please note you are logging into the %(hs)s server, not PotNg.org.",
                                             {
                                                 hs: this.props.serverConfig
                                                     .hsName,

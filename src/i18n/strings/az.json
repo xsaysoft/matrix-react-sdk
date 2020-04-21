@@ -417,7 +417,7 @@
     "%(senderDisplayName)s changed guest access to %(rule)s": "%(senderDisplayName)s %(rule)s-a qonaq girişi dəyişdirildi.",
     "%(senderDisplayName)s enabled flair for %(groups)s in this room.": "Bu otaqda %(qruplar)s üçün %(senderDisplayName)s aktiv oldu.",
     "%(senderDisplayName)s disabled flair for %(groups)s in this room.": "Bu otaqda %(groups)s üçün %(senderDisplayName)s aktiv oldu.",
-    "powered by OneScrin": "OneScrin tərəfindən təchiz edilmişdir",
+    "powered by PotNg": "PotNg tərəfindən təchiz edilmişdir",
     "Custom Server Options": "Fərdi Server Seçimləri",
     "%(senderDisplayName)s enabled flair for %(newGroups)s and disabled flair for %(oldGroups)s in this room.": "Bu otaqda %(newGroups)s üçün aktiv və %(oldGroups)s üçün %(senderDisplayName)s deaktiv oldu."
 }

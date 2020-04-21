@@ -19,9 +19,9 @@ import QuestionDialog from './QuestionDialog';
 import { _t } from '../../../languageHandler';
 
 export default (props) => {
-    const existingIssuesUrl = "https://github.com/OneScrinTeam/one-s-web/issues" +
+    const existingIssuesUrl = "https://github.com/PotNgTeam/one-s-web/issues" +
         "?q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc";
-    const newIssueUrl = "https://github.com/OneScrinTeam/one-s-web/issues";
+    const newIssueUrl = "https://github.com/PotNgTeam/one-s-web/issues";
 
     const description1 =
         _t("If you run into any bugs or have feedback you'd like to share, " +

@@ -142,7 +142,7 @@ export default class HelpUserSettingsTab extends React.Component {
     //                     CC-BY-SA 4.0</a>.
     //                 </li>
     //                 <li>
-    //                     The <a href="https://github.com/onescrin-com.ng/twemoji-colr" rel="noreferrer noopener"
+    //                     The <a href="https://github.com/PotNg-com.ng/twemoji-colr" rel="noreferrer noopener"
     //                            target="_blank"> twemoji-colr</a> font is ©&nbsp;
     //                     <a href="https://mozilla.org" rel="noreferrer noopener" target="_blank">Mozilla Foundation</a>{' '}
     //                     used under the terms of&nbsp;
@@ -164,12 +164,12 @@ export default class HelpUserSettingsTab extends React.Component {
 
     render() {
         let faqText = _t(
-            "For help with using Onescrin, click <a>here</a>.",
+            "For help with using PotNg, click <a>here</a>.",
             {},
             {
                 a: (sub) => (
                     <a
-                        href="https://onescrin.citural.com.ng"
+                        href="https://PotNg.citural.com.ng"
                         rel="noreferrer noopener"
                         target="_blank"
                     >
@@ -185,7 +185,7 @@ export default class HelpUserSettingsTab extends React.Component {
             faqText = (
                 <div>
                     {_t(
-                        "For help with using Onescrin, click <a>here</a> or start a chat with our " +
+                        "For help with using PotNg, click <a>here</a> or start a chat with our " +
                             "bot using the button below.",
                         {},
                         {
@@ -205,7 +205,7 @@ export default class HelpUserSettingsTab extends React.Component {
                             onClick={this._onStartBotChat}
                             kind="primary"
                         >
-                            {_t("Chat with Scrin Bot")}
+                            {_t("Chat with PotNg Bot")}
                         </AccessibleButton>
                     </div>
                 </div>
@@ -266,13 +266,13 @@ export default class HelpUserSettingsTab extends React.Component {
                             </AccessibleButton>
                         </div>
                         {_t(
-                            "To report a Onescrin-related security issue, please read the " +
+                            "To report a PotNg-related security issue, please read the " +
                                 "<a>Security Disclosure Policy</a>.",
                             {},
                             {
                                 a: (sub) => (
                                     <a
-                                        href="https://onescrin.com.ng/security-disclosure-policy/"
+                                        href="https://PotNg.com.ng/security-disclosure-policy/"
                                         rel="noreferrer noopener"
                                         target="_blank"
                                     >
@@ -302,7 +302,7 @@ export default class HelpUserSettingsTab extends React.Component {
                         {_t("Versions")}
                     </span>
                     <div className="mx_SettingsTab_subsectionText">
-                        {_t("Onescrin version:")} {vectorVersion}
+                        {_t("PotNg version:")} {vectorVersion}
                         <br />
                         {/* {_t("olm version:")} {olmVersion}<br /> */}
                         {updateButton}

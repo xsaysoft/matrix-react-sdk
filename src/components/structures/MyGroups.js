@@ -119,7 +119,7 @@ export default createReactClass({
                         </div>
                         { _t(
                             'Create a community to group together users and rooms! ' +
-                            'Build an homepage on OneScrin',
+                            'Build an homepage on PotNg',
                         ) }
                     </div>
                 </div>

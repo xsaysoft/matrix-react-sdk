@@ -98,7 +98,7 @@ export default class SecurityRoomSettingsTab extends React.Component {
                 {
                     'a': (sub) => {
                         return <a rel='noreferrer noopener' target='_blank'
-                                  href='https://onescrin.citural.com.ng'>{sub}</a>;
+                                  href='https://PotNg.citural.com.ng'>{sub}</a>;
                     },
                 },
             ),
@@ -206,7 +206,7 @@ export default class SecurityRoomSettingsTab extends React.Component {
 
     async _hasAliases() {
         const cli = MatrixClientPeg.get();
-        if (await cli.doesServerSupportUnstableFeature("org.onescrin.msc2432")) {
+        if (await cli.doesServerSupportUnstableFeature("org.PotNg.msc2432")) {
             const response = await cli.unstableGetLocalAliases(this.props.roomId);
             const localAliases = response.aliases;
             return Array.isArray(localAliases) && localAliases.length !== 0;

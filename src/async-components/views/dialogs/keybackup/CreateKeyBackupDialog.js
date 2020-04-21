@@ -78,7 +78,7 @@ export default class CreateKeyBackupDialog extends React.PureComponent {
         const cli = MatrixClientPeg.get();
         const secureSecretStorage = (
             SettingsStore.isFeatureEnabled("feature_cross_signing") &&
-            await cli.doesServerSupportUnstableFeature("org.onescrin.e2e_cross_signing")
+            await cli.doesServerSupportUnstableFeature("org.PotNg.e2e_cross_signing")
         );
         this.setState({ secureSecretStorage });
 

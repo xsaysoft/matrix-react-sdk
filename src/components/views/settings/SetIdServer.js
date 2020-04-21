@@ -45,7 +45,7 @@ async function checkIdentityServerUrl(u) {
     // XXX: duplicated logic from js-sdk but it's quite tied up in the validation logic in the
     // js-sdk so probably as easy to duplicate it than to separate it out so we can reuse it
     try {
-        const response = await fetch(u + '/_onescrin/identity/api/v1');
+        const response = await fetch(u + '/_PotNg/identity/api/v1');
         if (response.ok) {
             return null;
         } else if (response.status < 200 || response.status >= 300) {
@@ -344,9 +344,9 @@ export default class SetIdServer extends React.Component {
         let sectionTitle;
         let bodyText;
         if (idServerUrl) {
-            sectionTitle = _t("Identity Server onescrin", { server: abbreviateUrl(idServerUrl) });
+            sectionTitle = _t("Identity Server PotNg", { server: abbreviateUrl(idServerUrl) });
             bodyText = _t(
-                "You are currently using onescrin to discover and be discoverable by " +
+                "You are currently using PotNg to discover and be discoverable by " +
                 "existing contacts you know. You can change your identity server below.",
                 {},
                 { server: sub => <b>{abbreviateUrl(idServerUrl)}</b> },

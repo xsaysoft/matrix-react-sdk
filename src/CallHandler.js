@@ -253,13 +253,13 @@ function _showICEFallbackPrompt() {
             )}</p>
             <p>{_t(
                 "Alternatively, you can try to use the public server at " +
-                "<code>turn.onescrin.citural.com.ng</code>, but this will not be as reliable, and " +
+                "<code>turn.PotNg.citural.com.ng</code>, but this will not be as reliable, and " +
                 "it will share your IP address with that server. You can also manage " +
                 "this in Settings.",
                 null, { code },
             )}</p>
         </div>,
-        button: _t('Try using turn.onescrin.citural.com.ng'),
+        button: _t('Try using turn.PotNg.citural.com.ng'),
         cancelButton: _t('OK'),
         onFinished: (allow) => {
             SettingsStore.setValue("fallbackICEServerAllowed", null, SettingLevel.DEVICE, allow);

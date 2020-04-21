@@ -268,7 +268,7 @@ const RoleUserList = createReactClass({
         Modal.createTrackedDialog('Add Users to Group Summary', '', AddressPickerDialog, {
             title: _t('Add users to the community summary'),
             description: _t("Who would you like to add to this summary?"),
-            placeholder: _t("Name or Onescrin ID"),
+            placeholder: _t("Name or PotNg ID"),
             button: _t("Add to summary"),
             validAddressTypes: ['mx-user-id'],
             groupId: this.props.groupId,

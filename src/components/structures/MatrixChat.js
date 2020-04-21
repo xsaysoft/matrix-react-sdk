@@ -385,11 +385,11 @@ export default createReactClass({
         // This shouldn't happen because componentWillUpdate and componentDidUpdate
         // are used.
         if (this._pageChanging) {
-            console.warn('OnescrinChat.startPageChangeTimer: timer already started');
+            console.warn('PotNgChat.startPageChangeTimer: timer already started');
             return;
         }
         this._pageChanging = true;
-        performance.mark('riot_OnescrinChat_page_change_start');
+        performance.mark('riot_PotNgChat_page_change_start');
     },
 
     stopPageChangeTimer() {
@@ -397,19 +397,19 @@ export default createReactClass({
         if (!performance || !performance.mark) return null;
 
         if (!this._pageChanging) {
-            console.warn('OnescrinChat.stopPageChangeTimer: timer not started');
+            console.warn('PotNgChat.stopPageChangeTimer: timer not started');
             return;
         }
         this._pageChanging = false;
-        performance.mark('riot_OnescrinChat_page_change_stop');
+        performance.mark('riot_PotNgChat_page_change_stop');
         performance.measure(
-            'riot_OnescrinChat_page_change_delta',
-            'riot_OnescrinChat_page_change_start',
-            'riot_OnescrinChat_page_change_stop',
+            'riot_PotNgChat_page_change_delta',
+            'riot_PotNgChat_page_change_start',
+            'riot_PotNgChat_page_change_stop',
         );
-        performance.clearMarks('riot_OnescrinChat_page_change_start');
-        performance.clearMarks('riot_OnescrinChat_page_change_stop');
-        const measurement = performance.getEntriesByName('riot_OnescrinChat_page_change_delta').pop();
+        performance.clearMarks('riot_PotNgChat_page_change_start');
+        performance.clearMarks('riot_PotNgChat_page_change_stop');
+        const measurement = performance.getEntriesByName('riot_PotNgChat_page_change_delta').pop();
 
         // In practice, sometimes the entries list is empty, so we get no measurement
         if (!measurement) return null;
@@ -1337,7 +1337,7 @@ export default createReactClass({
             if (state === "SYNCING" && prevState === "SYNCING") {
                 return;
             }
-            console.info("OnescrinClient sync state => %s", state);
+            console.info("PotNgClient sync state => %s", state);
             if (state !== "PREPARED") { return; }
 
             self.firstSyncComplete = true;
@@ -1923,7 +1923,7 @@ export default createReactClass({
             this.setStateForNewView({ view: VIEWS.COMPLETE_SECURITY });
         } else if (
             SettingsStore.isFeatureEnabled("feature_cross_signing") &&
-            await cli.doesServerSupportUnstableFeature("org.onescrin.e2e_cross_signing")
+            await cli.doesServerSupportUnstableFeature("org.PotNg.e2e_cross_signing")
         ) {
             // This will only work if the feature is set to 'enable' in the config,
             // since it's too early in the lifecycle for users to have turned the

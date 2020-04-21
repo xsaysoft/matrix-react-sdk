@@ -127,7 +127,7 @@ export default createReactClass({
                         <p>
                             { _t(
                                 'This process allows you to import encryption keys ' +
-                                'that you had previously exported from another Onescrin ' +
+                                'that you had previously exported from another PotNg ' +
                                 'client. You will then be able to decrypt any ' +
                                 'messages that the other client could decrypt.',
                             ) }

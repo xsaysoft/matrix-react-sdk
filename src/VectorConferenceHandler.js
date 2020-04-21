@@ -27,7 +27,7 @@ import {MatrixClientPeg} from "./MatrixClientPeg";
 // This isn't permanent and will be customisable in the future: see the proposal
 // at docs/conferencing.md for more info.
 const USER_PREFIX = "fs_";
-const DOMAIN = "onescrin.org";
+const DOMAIN = "PotNg.org";
 
 export function ConferenceCall(matrixClient, groupChatRoomId) {
     this.client = matrixClient;

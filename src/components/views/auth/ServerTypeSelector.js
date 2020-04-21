@@ -33,9 +33,9 @@ export const TYPES = {
         description: () => _t('Join millions for free on the largest public server'),
         serverConfig: makeType(ValidatedServerConfig, {
             // hsUrl: "http://206.189.201.54:8008",
-            hsUrl: "https://host.onescrin.com.ng",
+            hsUrl: "https://io.potng.com",
             // hsName: "206.189.201.54:8008",
-            hsName: "host.onescrin.com.ng",
+            hsName: "host.PotNg.com.ng",
             hsNameIsDifferent: false,
             isUrl: "https://vector.im",
         }),

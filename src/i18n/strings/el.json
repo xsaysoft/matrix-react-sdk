@@ -46,7 +46,7 @@
     "Bans user with given id": "Αποκλεισμός χρήστη με το συγκεκριμένο αναγνωριστικό",
     "%(senderDisplayName)s removed the room name.": "Ο %(senderDisplayName)s διέγραψε το όνομα του δωματίου.",
     "Changes your display nickname": "Αλλάζει το ψευδώνυμο χρήστη",
-    "powered by OneScrin": "λειτουργεί με το OneScrin",
+    "powered by PotNg": "λειτουργεί με το PotNg",
     "Confirm password": "Επιβεβαίωση κωδικού πρόσβασης",
     "Continue": "Συνέχεια",
     "Create Room": "Δημιουργία δωματίου",

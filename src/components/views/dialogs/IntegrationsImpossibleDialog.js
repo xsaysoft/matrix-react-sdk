@@ -39,7 +39,7 @@ export default class IntegrationsImpossibleDialog extends React.Component {
                 <div className='mx_IntegrationsImpossibleDialog_content'>
                     <p>
                         {_t(
-                            "Your onescrin doesn't allow you to use an Integration Manager to do this. " +
+                            "Your PotNg doesn't allow you to use an Integration Manager to do this. " +
                             "Please contact an admin.",
                         )}
                     </p>

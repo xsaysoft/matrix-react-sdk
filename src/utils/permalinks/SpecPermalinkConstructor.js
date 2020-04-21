@@ -16,7 +16,7 @@ limitations under the License.
 
 import PermalinkConstructor, { PermalinkParts } from "./PermalinkConstructor";
 
-export const host = "host.onescrin.com.ng";
+export const host = "host.PotNg.com.ng";
 export const baseUrl = `https://${host}`;
 
 /**
