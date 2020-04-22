@@ -265,7 +265,7 @@ export default createReactClass({
                                     </div>
                                     <div className="mx_Login_smallError">
                                         {_t(
-                                            "Please note you are logging into the %(hs)s server, not PotNg.org.",
+                                            "Please note you are logging into the %(hs)s server, not PotNg.",
                                             {
                                                 hs: this.props.serverConfig
                                                     .hsName,

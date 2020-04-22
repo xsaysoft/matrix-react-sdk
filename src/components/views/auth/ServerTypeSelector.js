@@ -35,7 +35,7 @@ export const TYPES = {
             // hsUrl: "http://206.189.201.54:8008",
             hsUrl: "https://io.potng.com",
             // hsName: "206.189.201.54:8008",
-            hsName: "host.PotNg.com.ng",
+            hsName: "io.potng.com",
             hsNameIsDifferent: false,
             isUrl: "https://vector.im",
         }),

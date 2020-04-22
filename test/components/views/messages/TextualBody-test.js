@@ -111,7 +111,7 @@ describe("<TextualBody />", () => {
                 room: "room_id",
                 user: "sender",
                 content: {
-                    body: "Visit https://PotNg.org/",
+                    body: "Visit https://PotNg/",
                     msgtype: "m.text",
                 },
                 event: true,
@@ -121,8 +121,8 @@ describe("<TextualBody />", () => {
             expect(wrapper.text()).toBe(ev.getContent().body);
             const content = wrapper.find(".mx_EventTile_body");
             expect(content.html()).toBe('<span class="mx_EventTile_body" dir="auto">' +
-                'Visit <a href="https://PotNg.org/" class="linkified" target="_blank" rel="noreferrer noopener">' +
-                'https://PotNg.org/</a></span>');
+                'Visit <a href="https://PotNg/" class="linkified" target="_blank" rel="noreferrer noopener">' +
+                'https://PotNg/</a></span>');
         });
     });
 
@@ -225,7 +225,7 @@ describe("<TextualBody />", () => {
             room: "room_id",
             user: "sender",
             content: {
-                body: "Visit https://PotNg.org/",
+                body: "Visit https://PotNg/",
                 msgtype: "m.text",
             },
             event: true,
@@ -237,7 +237,7 @@ describe("<TextualBody />", () => {
         let widgets = wrapper.find("LinkPreviewWidget");
         // at this point we should have exactly one widget
         expect(widgets.length).toBe(1);
-        expect(widgets.at(0).prop("link")).toBe("https://PotNg.org/");
+        expect(widgets.at(0).prop("link")).toBe("https://PotNg/");
 
         // simulate an event edit and check the transition from the old URL preview to the new one
         const ev2 = mkEvent({
